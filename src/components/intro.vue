@@ -1,5 +1,12 @@
 <template>
   <section id="section1">
+    <div class="txt0">
+      <h1>
+        intro<br />ducing<br /><span class="color-blue">serio<br />verify</span>
+      </h1>
+      <p>The leading cloud<br />platform for inside<br />sales optimization.</p>
+    </div>
+
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -10,20 +17,14 @@
         <path
           id="svg_1"
           fill="none"
-          stroke-width="10"
+          stroke-width="15"
           stroke="#019b94"
           d="M1150,376h38v372H952.5v201"
         ></path>
-        <!-- <path
-            class="arrow"
-            fill="#fff"
-            d="M778.5,382h2.2v-11.1h-2.2V382z M773.4,382h3.2v-11.1h-3.2V382z M767.3,382h4.1v-11.1h-4.1L767.3,382
-			L767.3,382z M808.3,376.4l-14.3-13v7.4h-11.3V382H794v7.4L808.3,376.4z"
-          ></path> -->
         <path
           id="svg_2"
           fill="none"
-          stroke-width="10"
+          stroke-width="15"
           stroke="#FFF"
           d="M1150,376h38v372H952.5v201"
         ></path>
@@ -42,18 +43,21 @@ export default {
       svg2: ""
     };
   },
-  computed: mapGetters(["docHeightPerc"]),
+  computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
   methods: {
     ...mapActions(["getDocumentHeightPercentage"]),
     //event on scroll
     handleScroll() {
       this.getDocumentHeightPercentage();
-
+      // window.console.log(this.sectionsEndingPerc.section1);
       if (this.docHeightPerc < 0) {
         this.svg2.setAttribute("stroke-dashoffset", this.svg2.getTotalLength());
-      } else if (this.docHeightPerc >= 0 && this.docHeightPerc <= 24) {
-        this.drawPath(this.svg2, 0, 24);
-      } else if (this.docHeightPerc > 24) {
+      } else if (
+        this.docHeightPerc >= 0 &&
+        this.docHeightPerc <= this.sectionsEndingPerc.section1
+      ) {
+        this.drawPath(this.svg2, 0, this.sectionsEndingPerc.section1);
+      } else if (this.docHeightPerc > this.sectionsEndingPerc.section1) {
         this.svg2.setAttribute("stroke-dashoffset", 0);
       }
     },
@@ -74,6 +78,9 @@ export default {
     this.svg2 = document.querySelector("#svg_2");
     this.svg2.setAttribute("stroke-dasharray", this.svg2.getTotalLength());
     this.svg2.setAttribute("stroke-dashoffset", this.svg2.getTotalLength());
+
+    let animation = document.querySelector("#section1");
+    animation.style.transform = "translate(0,0)";
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -86,6 +93,50 @@ export default {
   position: relative;
   height: 100vh;
   width: 100%;
+  transform: translate(0, 100vh);
+  transition: all 1.5s ease;
   background-color: rgb(76, 175, 169);
+
+  .txt0 {
+    font-size: 20px;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    bottom: 27%;
+    left: 39.5%;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+    h1 {
+      font-size: 4vw;
+      line-height: 3.2vw;
+      letter-spacing: 2px;
+      padding-bottom: 1vw;
+      color: #fff;
+      -webkit-animation: h 1s ease 0.85s both;
+      animation: h 1s ease 0.85s both;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: canada-type-gibson, sans-serif;
+      font-weight: 1000;
+
+      .color-blue {
+        color: #18252a;
+      }
+    }
+
+    p {
+      font-size: 2.4vw;
+      line-height: 2.7vw;
+      -webkit-animation: i 1.7s ease 0.95s both;
+      animation: i 1.7s ease 0.95s both;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      letter-spacing: 1px;
+      font-family: grad, serif;
+    }
+  }
 }
 </style>
