@@ -1,6 +1,6 @@
 <template>
   <section id="section1">
-    <div class="txt0">
+    <div class="txt1">
       <h1>
         intro<br />ducing<br /><span class="color-blue">serio<br />verify</span>
       </h1>
@@ -97,7 +97,7 @@ export default {
   transition: all 1.5s ease;
   background-color: rgb(76, 175, 169);
 
-  .txt0 {
+  .txt1 {
     font-size: 20px;
     position: absolute;
     opacity: 0;

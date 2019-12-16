@@ -6,6 +6,7 @@
       <Outcome />
       <Quality />
       <Profitability />
+      <Features />
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@ import Intro2 from "../components/intro2";
 import Outcome from "../components/outcome";
 import Quality from "../components/quality";
 import Profitability from "../components/profitability";
+import Features from "../components/features";
 
 import { mapGetters, mapActions } from "vuex";
 
@@ -26,7 +28,7 @@ export default {
       sectionsHeight: []
     };
   },
-  components: { Intro, Intro2, Outcome, Quality, Profitability },
+  components: { Intro, Intro2, Outcome, Quality, Profitability, Features },
   computed: mapGetters(["sectionsEndingPerc"]),
   methods: {
     ...mapActions(["getSectionsPercetages"])
@@ -41,7 +43,7 @@ export default {
 <style scoped>
 #container {
   position: relative;
-  height: 1000vh;
+  height: 1500vh;
   width: 100%;
 }
 </style>

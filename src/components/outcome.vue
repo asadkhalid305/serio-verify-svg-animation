@@ -1,6 +1,6 @@
 <template>
   <section id="section2">
-    <div class="txt1 visible">
+    <div class="txt2 visible">
       <h3>Faster &amp; higher conversion</h3>
       <p>
         Distribute your inside sales leads automatically from your online forms
@@ -333,7 +333,7 @@ export default {
         this.docHeightPerc <= start + 8
       ) {
         this.drawPath(this.svg4b, start + 3, start + 8, -1);
-        // document.querySelector(".txt1").style.opacity = "0";
+        // document.querySelector(".txt2").style.opacity = "0";
         this.fill([this.svg4a]);
         this.unFill([
           this.svg4c,
@@ -352,7 +352,7 @@ export default {
         this.docHeightPerc >= start + 9 &&
         this.docHeightPerc <= start + 11
       ) {
-        document.querySelector(".txt1").style.opacity = "1";
+        document.querySelector(".txt2").style.opacity = "1";
         if (
           this.docHeightPerc >= start + 9 &&
           this.docHeightPerc < start + 9.2
@@ -572,7 +572,6 @@ export default {
     //unfill path
     unFill(els) {
       els.forEach(el => {
-        window.console.log(el);
         el.setAttribute("stroke-dashoffset", el.getTotalLength());
       });
     },
@@ -639,11 +638,11 @@ export default {
   bottom: 0;
   background-color: #27353a;
 
-  // .txt1.visible {
+  // .txt2.visible {
   //   opacity: 1;
   // }
 
-  .txt1 {
+  .txt2 {
     width: 100%;
     font-size: 20px;
     line-height: 34px;

@@ -1,6 +1,6 @@
 <template>
   <section id="section4">
-    <div class="txt3 visible">
+    <div class="txt4 visible">
       <h3>Improved ROI on your inside sales</h3>
       <p>
         Serio Verify is visualized real time in an executive dashboard. Monitor
@@ -280,7 +280,7 @@ export default {
           this.docHeightPerc < start + 3.4
         ) {
           this.drawPath(this.svg9b, start + 3.2, start + 3.4);
-          // document.querySelector(".txt3").style.opacity = "0";
+          // document.querySelector(".txt4").style.opacity = "0";
           this.fill([this.svg8a, this.svg9a]);
           this.unFill([
             this.svg8b,
@@ -301,7 +301,7 @@ export default {
           this.docHeightPerc < start + 3.6
         ) {
           this.drawPath(this.svg9c, start + 3.4, start + 3.6);
-          document.querySelector(".txt3").style.opacity = "1";
+          document.querySelector(".txt4").style.opacity = "1";
           this.fill([this.svg8a, this.svg9a, this.svg9b]);
           this.unFill([
             this.svg8b,
@@ -651,11 +651,11 @@ export default {
   bottom: 0;
   background-color: #27353a;
 
-  .txt3.visible {
+  .txt4.visible {
     // opacity: 1;
     color: #fff;
   }
-  .txt3 {
+  .txt4 {
     width: 100%;
     font-size: 20px;
     line-height: 34px;

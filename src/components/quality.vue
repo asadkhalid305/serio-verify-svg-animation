@@ -1,6 +1,6 @@
 <template>
   <section id="section3">
-    <div class="txt2 visible">
+    <div class="txt3 visible">
       <h3>Cheaper &amp; better leads</h3>
       <p>
         By washing and enriching your inside sales leads in real time you only
@@ -146,7 +146,7 @@ export default {
         this.docHeightPerc <= start + 3
       ) {
         this.drawPath(this.svg6a, start, start + 3, -1);
-        // document.querySelector(".txt2").style.opacity = "0";
+        // document.querySelector(".txt3").style.opacity = "0";
         this.unFill([
           this.svg6b,
           this.svg7a,
@@ -161,7 +161,7 @@ export default {
         this.docHeightPerc >= start + 3 &&
         this.docHeightPerc <= start + 4.4
       ) {
-        document.querySelector(".txt2").style.opacity = "1";
+        document.querySelector(".txt3").style.opacity = "1";
         if (
           this.docHeightPerc >= start + 3 &&
           this.docHeightPerc < start + 3.2
@@ -353,11 +353,11 @@ export default {
   bottom: 0;
   background-color: #27353a;
 
-  .txt2.visible {
+  .txt3.visible {
     // opacity: 1;
     color: #fff;
   }
-  .txt2 {
+  .txt3 {
     width: 100%;
     font-size: 20px;
     line-height: 34px;
