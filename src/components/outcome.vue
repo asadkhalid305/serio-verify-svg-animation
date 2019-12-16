@@ -352,6 +352,7 @@ export default {
         this.docHeightPerc >= start + 9 &&
         this.docHeightPerc <= start + 11
       ) {
+        document.querySelector(".txt1").style.opacity = "1";
         if (
           this.docHeightPerc >= start + 9 &&
           this.docHeightPerc < start + 9.2
@@ -375,8 +376,6 @@ export default {
           this.docHeightPerc < start + 9.4
         ) {
           this.drawPath(this.svg5i, start + 9.2, start + 9.4);
-          document.querySelector(".txt1").style.opacity = "1";
-
           this.fill([this.svg4a, this.svg4b, this.svg5j]);
           this.unFill([
             this.svg4c,
@@ -638,12 +637,11 @@ export default {
   height: 127vh;
   width: 100%;
   bottom: 0;
-  // top: 100vh;
   background-color: #27353a;
 
-  .txt1.visible {
-    opacity: 1;
-  }
+  // .txt1.visible {
+  //   opacity: 1;
+  // }
 
   .txt1 {
     width: 100%;
@@ -652,8 +650,8 @@ export default {
     position: absolute;
     opacity: 0;
     transition: all 0.3s ease;
-    top: 68%;
-    left: 5.6%;
+    top: 62%;
+    left: 5.8%;
     width: 32%;
     color: #fff;
 

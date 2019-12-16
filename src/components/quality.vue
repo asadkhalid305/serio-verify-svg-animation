@@ -41,7 +41,6 @@
         fill="none"
         stroke="#233034"
         stroke-width="10"
-        stroke-miterlimit="10"
         d="M321,511 167,511 167,237 2,237 "
       ></path>
       <path
@@ -49,7 +48,6 @@
         class="mobile-hidden"
         stroke="#233034"
         stroke-width="10"
-        stroke-miterlimit="10"
         d="M809,900 809,854 914,854 914,511 695,511"
       ></path>
 
@@ -148,6 +146,7 @@ export default {
         this.docHeightPerc <= start + 3
       ) {
         this.drawPath(this.svg6a, start, start + 3, -1);
+        // document.querySelector(".txt2").style.opacity = "0";
         this.unFill([
           this.svg6b,
           this.svg7a,
@@ -257,9 +256,9 @@ export default {
         }
       } else if (
         this.docHeightPerc >= start + 4.5 &&
-        this.docHeightPerc < start + 7.5
+        this.docHeightPerc < start + 11.2
       ) {
-        this.drawPath(this.svg6b, start + 4.5, start + 7.5, -1);
+        this.drawPath(this.svg6b, start + 4.5, start + 11.2, -1);
         this.fill([
           this.svg6a,
           this.svg7a,
@@ -270,7 +269,7 @@ export default {
           this.svg7f,
           this.svg7g
         ]);
-      } else if (this.docHeightPerc > start + 7.5) {
+      } else if (this.docHeightPerc > start + 11.2) {
         this.fill([
           this.svg6a,
           this.svg6b,
@@ -349,13 +348,13 @@ export default {
 <style lang="scss">
 #section3 {
   position: relative;
-  height: 147vh;
+  height: 125.5vh;
   width: 100%;
   bottom: 0;
   background-color: #27353a;
 
   .txt2.visible {
-    opacity: 1;
+    // opacity: 1;
     color: #fff;
   }
   .txt2 {
@@ -365,7 +364,7 @@ export default {
     position: absolute;
     opacity: 0;
     transition: all 0.3s ease;
-    top: 54%;
+    top: 62%;
     left: 24%;
     width: 25%;
 
