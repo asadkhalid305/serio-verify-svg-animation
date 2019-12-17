@@ -74,9 +74,9 @@
             stroke-width="10"
             d="M957.6,174.1H1"
           ></path>
-          <circle fill="#4c6e75" cx="718.2" cy="173.8" r="9.3"></circle>
+          <!-- <circle fill="#4c6e75" cx="718.2" cy="173.8" r="9.3"></circle>
           <circle fill="#4c6e75" cx="478.8" cy="173.8" r="9.3"></circle>
-          <circle fill="#4c6e75" cx="239.4" cy="173.8" r="9.3"></circle>
+          <circle fill="#4c6e75" cx="239.4" cy="173.8" r="9.3"></circle> -->
 
           <!-- MASK -->
           <g>
@@ -94,7 +94,7 @@
               stroke-width="10"
               d="M957.6,174.1H1"
             ></path>
-            <circle
+            <!-- <circle
               id="svg_10c"
               fill="none"
               stroke="#27363b"
@@ -120,7 +120,7 @@
               cx="239.4"
               cy="173.8"
               r="9.3"
-            ></circle>
+            ></circle> -->
           </g>
         </svg>
 
@@ -203,11 +203,11 @@ export default {
     return {
       svg10a: 0,
       svg10b: 0,
-      svg10c: 0,
-      svg10d: 0,
-      svg10e: 0,
+      // svg10c: 0,
+      // svg10d: 0,
+      // svg10e: 0,
       initial: 0,
-      screenNo: 0
+      screenNo: 1
     };
   },
   computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
@@ -226,9 +226,9 @@ export default {
         this.unFill([
           this.svg10a,
           this.svg10b,
-          this.svg10c,
-          this.svg10d,
-          this.svg10e,
+          // this.svg10c,
+          // this.svg10d,
+          // this.svg10e,
           this.svg11
         ]);
         document.querySelector(".fixed-container").style.position = "static";
@@ -243,13 +243,18 @@ export default {
 
         if (this.docHeightPerc <= start + 20) {
           this.drawPath(this.svg11, start, start + 20);
-          this.unFill([this.svg10b, this.svg10c, this.svg10d, this.svg10e]);
+          this.unFill([
+            this.svg10b
+            // this.svg10c, this.svg10d, this.svg10e
+          ]);
         }
       }
 
       if (this.docHeightPerc <= start + 8) {
         document.querySelector(".featureImgContainer").style.transform =
           "translate3d(0px, 348px, 0px)";
+
+        document.querySelector(".slides").style.opacity = "0";
       }
 
       if (this.docHeightPerc > start + 8 && this.docHeightPerc <= start + 25) {
@@ -257,6 +262,9 @@ export default {
         document.querySelector(".featureImgContainer").style.transform =
           "translate3d(0px, 0px, 0px)";
         this.fill([this.svg10a, this.svg11]);
+
+        document.querySelector(".slides").style.opacity = "1";
+
         this.screenNo = 1;
         document.querySelector(".slide h3").innerHTML = "the dashboard";
         document.querySelector(".slide p").innerHTML =
@@ -266,7 +274,9 @@ export default {
           document.querySelector(".featureImgContainer").style.transform =
             "translate3d(0px, -348px, 0px)";
 
-          this.screenNo = 1;
+          document.querySelector(".slides").style.opacity = "2";
+
+          this.screenNo = 2;
           document.querySelector(".slide h3").innerHTML = "effeciency";
           document.querySelector(".slide p").innerHTML =
             "Get insights into cost per new customer across multiple traffic sources and call centers.";
@@ -274,335 +284,26 @@ export default {
         if (this.docHeightPerc >= start + 16.5) {
           document.querySelector(".featureImgContainer").style.transform =
             "translate3d(0px, -700px, 0px)";
+
+          this.screenNo = 3;
+          document.querySelector(".slide h3").innerHTML = "statistic";
+          document.querySelector(".slide p").innerHTML =
+            "Monitor your data cleansing and see trends for flows of interested consumers.";
         }
         if (this.docHeightPerc >= start + 20.5) {
           document.querySelector(".featureImgContainer").style.transform =
             "translate3d(0px, -1050px, 0px)";
+
+          this.screenNo = 4;
+          document.querySelector(".slide h3").innerHTML = "conversion";
+          document.querySelector(".slide p").innerHTML =
+            "Get insights into cost per new customer across multiple traffic sources and call centers.";
         }
       }
 
       if (this.docHeightPerc > start + 25) {
         document.querySelector(".fixed-container").style.position = "static";
       }
-      //   else if (
-      //     this.docHeightPerc >= start + 3 &&
-      //     this.docHeightPerc <= start + 5.6
-      //   ) {
-      //     document.querySelector(".txt2").style.opacity = "1";
-      //     if (
-      //       this.docHeightPerc >= start + 3 &&
-      //       this.docHeightPerc < start + 3.2
-      //     ) {
-      //       this.drawPath(this.svg9a, start + 3, start + 3.2);
-      //       this.fill([this.svg8a]);
-      //       this.unFill([
-      //         this.svg8b,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l,
-      //         this.svg9m
-      //       ]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 3.2 &&
-      //       this.docHeightPerc < start + 3.4
-      //     ) {
-      //       this.drawPath(this.svg9b, start + 3.2, start + 3.4);
-      //       // document.querySelector(".txt5").style.opacity = "0";
-      //       this.fill([this.svg8a, this.svg9a]);
-      //       this.unFill([
-      //         this.svg8b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l,
-      //         this.svg9m
-      //       ]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 3.4 &&
-      //       this.docHeightPerc < start + 3.6
-      //     ) {
-      //       this.drawPath(this.svg9c, start + 3.4, start + 3.6);
-      //       document.querySelector(".txt5").style.opacity = "1";
-      //       this.fill([this.svg8a, this.svg9a, this.svg9b]);
-      //       this.unFill([
-      //         this.svg8b,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l,
-      //         this.svg9m
-      //       ]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 3.6 &&
-      //       this.docHeightPerc <= start + 3.8
-      //     ) {
-      //       this.drawPath(this.svg9d, start + 3.6, start + 3.8);
-      //       this.fill([this.svg8a, this.svg9a, this.svg9b, this.svg9c]);
-      //       this.unFill([
-      //         this.svg8b,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l,
-      //         this.svg9m
-      //       ]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 3.8 &&
-      //       this.docHeightPerc <= start + 4
-      //     ) {
-      //       this.drawPath(this.svg9e, start + 3.8, start + 4);
-      //       this.fill([
-      //         this.svg8a,
-      //         this.svg9a,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d
-      //       ]);
-      //       this.unFill([
-      //         this.svg8b,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l,
-      //         this.svg9m
-      //       ]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 4 &&
-      //       this.docHeightPerc <= start + 4.2
-      //     ) {
-      //       this.drawPath(this.svg9f, start + 4, start + 4.2);
-      //       this.fill([
-      //         this.svg8a,
-      //         this.svg9a,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e
-      //       ]);
-      //       this.unFill([
-      //         this.svg8b,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l,
-      //         this.svg9m
-      //       ]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 4.2 &&
-      //       this.docHeightPerc <= start + 4.4
-      //     ) {
-      //       this.drawPath(this.svg9g, start + 4.2, start + 4.4);
-      //       this.fill([
-      //         this.svg8a,
-      //         this.svg9a,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f
-      //       ]);
-      //       this.unFill([
-      //         this.svg8b,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l,
-      //         this.svg9m
-      //       ]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 4.4 &&
-      //       this.docHeightPerc <= start + 4.6
-      //     ) {
-      //       this.drawPath(this.svg9h, start + 4.4, start + 4.6);
-      //       this.fill([
-      //         this.svg8a,
-      //         this.svg9a,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g
-      //       ]);
-      //       this.unFill([
-      //         this.svg8b,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l,
-      //         this.svg9m
-      //       ]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 4.6 &&
-      //       this.docHeightPerc <= start + 4.8
-      //     ) {
-      //       this.drawPath(this.svg9i, start + 4.6, start + 4.8);
-      //       this.fill([
-      //         this.svg8a,
-      //         this.svg9a,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h
-      //       ]);
-      //       this.unFill([
-      //         this.svg8b,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l,
-      //         this.svg9m
-      //       ]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 4.8 &&
-      //       this.docHeightPerc <= start + 5.0
-      //     ) {
-      //       this.drawPath(this.svg9j, start + 4.8, start + 5.0);
-      //       this.fill([
-      //         this.svg8a,
-      //         this.svg9a,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i
-      //       ]);
-      //       this.unFill([this.svg8b, this.svg9k, this.svg9l, this.svg9m]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 5.0 &&
-      //       this.docHeightPerc <= start + 5.2
-      //     ) {
-      //       this.drawPath(this.svg9k, start + 5.0, start + 5.2);
-      //       this.fill([
-      //         this.svg8a,
-      //         this.svg9a,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j
-      //       ]);
-      //       this.unFill([this.svg8b, this.svg9l, this.svg9m]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 5.2 &&
-      //       this.docHeightPerc <= start + 5.4
-      //     ) {
-      //       this.drawPath(this.svg9l, start + 5.2, start + 5.4);
-      //       this.fill([
-      //         this.svg8a,
-      //         this.svg9a,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k
-      //       ]);
-      //       this.unFill([this.svg8b, this.svg9m]);
-      //     } else if (
-      //       this.docHeightPerc >= start + 5.4 &&
-      //       this.docHeightPerc <= start + 5.6
-      //     ) {
-      //       this.drawPath(this.svg9m, start + 5.4, start + 5.6);
-      //       this.fill([
-      //         this.svg8a,
-      //         this.svg9a,
-      //         this.svg9b,
-      //         this.svg9c,
-      //         this.svg9d,
-      //         this.svg9e,
-      //         this.svg9f,
-      //         this.svg9g,
-      //         this.svg9h,
-      //         this.svg9i,
-      //         this.svg9j,
-      //         this.svg9k,
-      //         this.svg9l
-      //       ]);
-      //       this.unFill([this.svg8b]);
-      //     }
-      //   } else if (
-      //     this.docHeightPerc >= start + 5.7 &&
-      //     this.docHeightPerc <= start + 8.7
-      //   ) {
-      //     this.drawPath(this.svg8b, start + 5.7, start + 8.7);
-      //     this.fill([
-      //       this.svg8a,
-      //       this.svg9a,
-      //       this.svg9b,
-      //       this.svg9c,
-      //       this.svg9d,
-      //       this.svg9e,
-      //       this.svg9f,
-      //       this.svg9g,
-      //       this.svg9h,
-      //       this.svg9i,
-      //       this.svg9j,
-      //       this.svg9k,
-      //       this.svg9l,
-      //       this.svg9m
-      //     ]);
-      //   } else if (this.docHeightPerc > start + 8.7) {
-      //     this.fill([
-      //       this.svg8a,
-      //       this.svg8b,
-      //       this.svg9a,
-      //       this.svg9b,
-      //       this.svg9c,
-      //       this.svg9d,
-      //       this.svg9e,
-      //       this.svg9f,
-      //       this.svg9g,
-      //       this.svg9h,
-      //       this.svg9i,
-      //       this.svg9j,
-      //       this.svg9k,
-      //       this.svg9l,
-      //       this.svg9m
-      //     ]);
-      //   }
     },
 
     //draw line
@@ -642,17 +343,17 @@ export default {
 
     this.svg10a = document.querySelector("#svg_10a");
     this.svg10b = document.querySelector("#svg_10b");
-    this.svg10c = document.querySelector("#svg_10c");
-    this.svg10d = document.querySelector("#svg_10d");
-    this.svg10e = document.querySelector("#svg_10e");
+    // this.svg10c = document.querySelector("#svg_10c");
+    // this.svg10d = document.querySelector("#svg_10d");
+    // this.svg10e = document.querySelector("#svg_10e");
     this.svg11 = document.querySelector("#svg_11");
 
     this.setDashArrayAndOffset([
       this.svg10a,
       this.svg10b,
-      this.svg10c,
-      this.svg10d,
-      this.svg10e,
+      // this.svg10c,
+      // this.svg10d,
+      // this.svg10e,
       this.svg11
     ]);
   },
@@ -684,10 +385,6 @@ export default {
   bottom: 0;
   background-color: #557c83;
 
-  //   #features-container {
-  //     transform: translate3d(0px, 0px, 0px);
-  //   }
-
   .fixed-container {
     top: 0;
     z-index: 10000;
@@ -715,20 +412,14 @@ export default {
     left: 68.5%;
     top: 33%;
     color: #fff;
+    opacity: 0;
+    transition: opacity 1s ease;
 
     .counter {
       font-size: 1.4vw;
     }
 
     .slide {
-      // opacity: 1;
-      // position: absolute;
-      // top: 40px;
-      // left: 0;
-      // width: 100%;
-      // opacity: 0;
-      transition: opacity 0.4s ease;
-
       h3 {
         font-size: 1.7vw !important;
         line-height: 1.4vw !important;

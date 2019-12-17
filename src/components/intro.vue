@@ -2,9 +2,11 @@
   <section id="section1">
     <div class="txt1">
       <h1>
-        intro<br />ducing<br /><span class="color-blue">serio<br />verify</span>
+        intro<br />ducing<br /><span class="color-blue"
+          >svg<br />animations</span
+        >
       </h1>
-      <p>The leading cloud<br />platform for inside<br />sales optimization.</p>
+      <p>The best animation<br />format for web<br />apps interactivity.</p>
     </div>
 
     <svg
@@ -110,12 +112,11 @@ export default {
     transform: translateY(0);
 
     h1 {
-      font-size: 4vw;
+      font-size: 3.2vw;
       line-height: 3.2vw;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       padding-bottom: 1vw;
       color: #fff;
-      -webkit-animation: h 1s ease 0.85s both;
       animation: h 1s ease 0.85s both;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -128,11 +129,9 @@ export default {
     }
 
     p {
-      font-size: 2.4vw;
+      font-size: 2.2vw;
       line-height: 2.7vw;
-      -webkit-animation: i 1.7s ease 0.95s both;
       animation: i 1.7s ease 0.95s both;
-      -webkit-transform: translateY(0);
       transform: translateY(0);
       letter-spacing: 1px;
       font-family: grad, serif;

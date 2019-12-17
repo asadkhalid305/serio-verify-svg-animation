@@ -1,6 +1,6 @@
 <template>
   <section id="section1a">
-    <h1>Hello World!</h1>
+    <h1>Keep Scrolling!</h1>
   </section>
 </template>
 
@@ -50,6 +50,10 @@ export default {
     text-align: center;
     font-size: 10vh;
     color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 1000;
   }
 }
 </style>

@@ -43,7 +43,7 @@ export default {
 <style scoped>
 #container {
   position: relative;
-  height: 1500vh;
+  height: 1000vh;
   width: 100%;
 }
 </style>
