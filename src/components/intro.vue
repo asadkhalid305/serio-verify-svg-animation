@@ -1,10 +1,8 @@
 <template>
   <section id="section1">
-    <div class="txt1">
+    <div class="s1-txt">
       <h1>
-        intro<br />ducing<br /><span class="color-blue"
-          >svg<br />animations</span
-        >
+        intro<br />ducing<br /><span class="color-blue">svg<br />design</span>
       </h1>
       <p>The best animation<br />format for web<br />apps interactivity.</p>
     </div>
@@ -12,23 +10,28 @@
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 1905 949"
-      id="path"
+      viewBox="0 184 1440 900"
     >
-      <g style="clip-path: url(#landingClipTop);">
+      <path
+        fill="none"
+        stroke-width="10"
+        stroke="#019b94"
+        d="M822,376h38v372H664.5v152"
+      ></path>
+      <path
+        class="arrow"
+        fill="#fff"
+        d="M778.5,382h2.2v-11.1h-2.2V382z M773.4,382h3.2v-11.1h-3.2V382z M767.3,382h4.1v-11.1h-4.1L767.3,382
+			L767.3,382z M808.3,376.4l-14.3-13v7.4h-11.3V382H794v7.4L808.3,376.4z"
+      ></path>
+
+      <g>
         <path
-          id="svg_1"
+          id="s1svg_1"
           fill="none"
-          stroke-width="15"
-          stroke="#019b94"
-          d="M1150,376h38v372H952.5v201"
-        ></path>
-        <path
-          id="svg_2"
-          fill="none"
-          stroke-width="15"
-          stroke="#FFF"
-          d="M1150,376h38v372H952.5v201"
+          stroke="#fff"
+          stroke-width="10"
+          d="M822,376h38v372H664.5v152"
         ></path>
       </g>
     </svg>
@@ -42,25 +45,23 @@ export default {
   name: "Intro",
   data() {
     return {
-      svg2: ""
+      s1svg1: ""
     };
   },
   computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
   methods: {
-    ...mapActions(["getDocumentHeightPercentage"]),
+    ...mapActions(["getDocumentHeightPercentage", "getSectionsClientHeight"]),
     //event on scroll
     handleScroll() {
       this.getDocumentHeightPercentage();
       // window.console.log(this.sectionsEndingPerc.section1);
+      let start = this.sectionsEndingPerc.section1;
       if (this.docHeightPerc < 0) {
-        this.svg2.setAttribute("stroke-dashoffset", this.svg2.getTotalLength());
-      } else if (
-        this.docHeightPerc >= 0 &&
-        this.docHeightPerc <= this.sectionsEndingPerc.section1
-      ) {
-        this.drawPath(this.svg2, 0, this.sectionsEndingPerc.section1);
-      } else if (this.docHeightPerc > this.sectionsEndingPerc.section1) {
-        this.svg2.setAttribute("stroke-dashoffset", 0);
+        this.unFill([this.s1svg1]);
+      } else if (this.docHeightPerc >= 0 && this.docHeightPerc <= start) {
+        this.drawPath(this.s1svg1, 0, start - 0.1);
+      } else if (this.docHeightPerc > start) {
+        this.fill([this.s1svg1]);
       }
     },
 
@@ -71,18 +72,46 @@ export default {
       var scrollPerc = (this.docHeightPerc - startPerc) / (endPerc - startPerc);
       drawLen = pathLen - pathLen * scrollPerc;
       el.setAttribute("stroke-dashoffset", sign * drawLen);
+    },
+
+    //unfill path
+    unFill(els) {
+      els.forEach(el => {
+        el.setAttribute("stroke-dashoffset", el.getTotalLength());
+      });
+    },
+
+    //fill path
+    fill(els) {
+      els.forEach(el => {
+        el.setAttribute("stroke-dashoffset", 0);
+      });
+    },
+
+    setDashArrayAndOffset(els) {
+      els.forEach(el => {
+        el.setAttribute("stroke-dasharray", el.getTotalLength());
+        el.setAttribute("stroke-dashoffset", el.getTotalLength());
+      });
     }
   },
   mounted() {
     this.getDocumentHeightPercentage();
     window.addEventListener("scroll", this.handleScroll);
 
-    this.svg2 = document.querySelector("#svg_2");
-    this.svg2.setAttribute("stroke-dasharray", this.svg2.getTotalLength());
-    this.svg2.setAttribute("stroke-dashoffset", this.svg2.getTotalLength());
+    this.s1svg1 = document.querySelector("#s1svg_1");
 
-    let animation = document.querySelector("#section1");
-    animation.style.transform = "translate(0,0)";
+    this.setDashArrayAndOffset([this.s1svg1]);
+
+    document.querySelector("#section1").style.transform = "translate(0,0)";
+    document.querySelector(".s1-txt").style.opacity = "1";
+    document.querySelector(".arrow").style.opacity = "1";
+    document.querySelector(".arrow").style.transform = "translateX(0px)";
+
+    this.getSectionsClientHeight({
+      sectionId: "section1",
+      sectionClientHeight: document.querySelector("#section1").offsetHeight
+    });
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -99,22 +128,28 @@ export default {
   transition: all 1.5s ease;
   background-color: rgb(76, 175, 169);
 
-  .txt1 {
+  .arrow {
+    transform-origin: center;
+    transform: translateX(-10px);
+    opacity: 0;
+    transition: all 3s ease;
+  }
+
+  .s1-txt {
+    bottom: 27%;
+    left: 35.5%;
+    opacity: 1;
+    width: 100%;
     font-size: 20px;
+    line-height: 34px;
     position: absolute;
     opacity: 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    bottom: 27%;
-    left: 39.5%;
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    transition: all 3s ease;
 
     h1 {
-      font-size: 3.2vw;
-      line-height: 3.2vw;
-      letter-spacing: 1.5px;
+      font-size: 5vw;
+      line-height: 4.2vw;
+      letter-spacing: 2px;
       padding-bottom: 1vw;
       color: #fff;
       animation: h 1s ease 0.85s both;

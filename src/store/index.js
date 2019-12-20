@@ -6,11 +6,13 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     docHeightPerc: 0,
-    sectionsEndingPerc: 0
+    sectionsEndingPerc: 0,
+    sectionsClientHeight: {}
   },
   getters: {
     docHeightPerc: state => state.docHeightPerc,
-    sectionsEndingPerc: state => state.sectionsEndingPerc
+    sectionsEndingPerc: state => state.sectionsEndingPerc,
+    sectionsClientHeight: state => state.sectionsClientHeight
   },
   actions: {
     getDocumentHeightPercentage({
@@ -63,7 +65,25 @@ export default new Vuex.Store({
         }
       }
       commit('setSectionsEndingPerc', sectionsHeight)
-    }
+    },
+
+    getSectionsClientHeight({
+      commit
+    }, payload) {
+      commit('setSectionsClientHeight', payload)
+    },
+
+    // getScrollDirection({
+    //   commit
+    // }) {
+    //   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    //   if (st > lastScrollTop) {
+    //     // downscroll code
+    //   } else {
+    //     // upscroll code
+    //   }
+    //   lastScrollTop = st <= 0 ? 0 : st;
+    // }
   },
   mutations: {
     setDocHeight: (state, newDocHeightPerc) => {
@@ -71,6 +91,15 @@ export default new Vuex.Store({
     },
     setSectionsEndingPerc: (state, newSectionsEndingPerc) => {
       state.sectionsEndingPerc = newSectionsEndingPerc
+    },
+    setSectionsClientHeight: (state, payload) => {
+      let temp = {
+        ...state.sectionsClientHeight
+      }
+
+      temp[payload.sectionId] = payload.sectionClientHeight
+
+      state.sectionsClientHeight = temp
     }
   },
 })

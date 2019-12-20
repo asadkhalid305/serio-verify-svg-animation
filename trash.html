@@ -1,115 +1,259 @@
-<div id="features" in-view="mc.sectionInView('features', $inview, $inviewpart, $event)" in-view-options="{offsetTop: 0}"
-    data-ui-view="features" class="ng-scope inview">
-    <section id="features" class="features ng-scope">
-
-        <div id="features-container" class="fixed-container" style="transform: translate3d(0px, 0px, 0px);">
-            <div class="svg-container">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900">
-                    <defs>
-                        <clipPath id="featuresSnake">
-                            <rect id="featuresSnakeRect" y="121" fill="#6E6E6E" width="1440" height="118"
-                                x="245.65310492505364"></rect>
-                        </clipPath>
-                    </defs>
-
-                    <!-- TITLE -->
-                    <g>
-                        <path d="M1021.65,163.25h-20.4v8.6h19.2V186h-19.2v18.2h-18V149h38.4v14.2h0Z"
-                            transform="translate(-1 0)" fill="#fff"></path>
-                        <path d="M1069.25,204.25h-40V149h39.2v14.2h-21.2v6h20v14.2h-20v6.4h22v14.4Z"
-                            transform="translate(-1 0)" fill="#fff"></path>
-                        <path
-                            d="M1131.25,204.25h-19.6l-2.2-7.8h-15.8l-2.1,7.8h-18.7l19.2-55.2h20Zm-25.5-21.6-4.1-14.8-4.1,14.8h8.2Z"
-                            transform="translate(-1 0)" fill="#fff"></path>
-                        <path d="M1169.35,163h-13v41.1h-18.1V163h-13V149h44.1v14Z" transform="translate(-1 0)"
-                            fill="#fff"></path>
-                        <path
-                            d="M1225.35,180.65c0,8.8-2,14-6,18s-10.4,6.5-19.2,6.5-15.2-2.5-19.2-6.5-6-9.2-6-18V149h18.2v32.4c0,3.3.6,4.8,1.8,6a7.76,7.76,0,0,0,10.4,0c1.2-1.2,1.8-2.8,1.8-6V149h18.2v31.6Z"
-                            transform="translate(-1 0)" fill="#fff"></path>
-                        <path
-                            d="M1285,204.25h-20.8l-8.8-18.4h-2.3v18.4H1235V149h24c6.8,0,12,1.2,16,4a16.29,16.29,0,0,1,6.8,13.6c0,11.2-6.8,15.2-9.2,16.6Zm-23.5-40.6a6.44,6.44,0,0,0-4-1h-4.6v9.6h4.6a6.24,6.24,0,0,0,4-1,3.93,3.93,0,0,0,2-3.8A4.11,4.11,0,0,0,1261.45,163.65Z"
-                            transform="translate(-1 0)" fill="#fff"></path>
-                        <path d="M1329.75,204.25h-40V149H1329v14.2h-21.2v6h20v14.2h-20v6.4h22v14.4Z"
-                            transform="translate(-1 0)" fill="#fff"></path>
-                        <path
-                            d="M1371.75,200.45c-4.4,3.4-9.9,4.7-16.3,4.7a35,35,0,0,1-21.3-7.4l8-13.6c5.1,4.3,12.3,6,14.7,6s4.1-.7,4.1-2.3-2-2.2-4-2.9-6.4-2-8-2.6a24,24,0,0,1-7.6-4.1c-2.8-2.4-5-5.8-5-11.8a17.6,17.6,0,0,1,6.4-13.4c3.4-2.8,8.9-4.8,16.2-4.8s14.9,2.6,19.7,6.6l-6.9,12.8a22.77,22.77,0,0,0-13.1-5.3c-2.9,0-4.5.6-4.5,2.2s2.6,2.2,3.8,2.6l6.6,2c1.9,0.6,6.4,2.2,9.2,4.6a15.1,15.1,0,0,1,5.2,12A18.33,18.33,0,0,1,1371.75,200.45Z"
-                            transform="translate(-1 0)" fill="#fff"></path>
-                    </g>
-
-                    <!-- BASE -->
-                    <path fill="none" stroke="#4c6e75" stroke-width="10" d="M957.6,174.1H1 M1440,174.1h-44.4"></path>
-                    <circle fill="#4c6e75" cx="718.2" cy="173.8" r="9.3"></circle>
-                    <circle fill="#4c6e75" cx="478.8" cy="173.8" r="9.3"></circle>
-                    <circle fill="#4c6e75" cx="239.4" cy="173.8" r="9.3"></circle>
-
-                    <!-- MASK -->
-                    <g style="clip-path: url(#featuresSnake);">
-                        <path fill="none" stroke="#27363b" stroke-width="10" d="M957.6,174.1H1 M1440,174.1h-44.4">
-                        </path>
-                        <circle fill="#27363b" cx="718.2" cy="173.8" r="9.3"></circle>
-                        <circle fill="#27363b" cx="478.8" cy="173.8" r="9.3"></circle>
-                        <circle fill="#27363b" cx="239.4" cy="173.8" r="9.3"></circle>
-                    </g>
-                </svg>
+<div id="product" in-view="mc.sectionInView('product', $inview, $inviewpart, $event)" in-view-options="{offsetTop: 0}"
+    data-ui-view="product" data-ng-if="!mobile" class="ng-scope inview">
+    <section id="products" class="products ng-scope">
 
 
-
-
-                <svg id="product-computer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900">
-                    <defs>
-                        <clipPath id="featuresImage">
-                            <path fill="#888888"
-                                d="M202.5,347h618c3.3,0,6,2.7,6,6v337c0,3.3-2.7,6-6,6h-618c-3.3,0-6-2.7-6-6V353C196.5,349.7,199.2,347,202.5,347z">
-                            </path>
-                        </clipPath>
-                    </defs>
-
-                    <g style="clip-path: url(#featuresImage);">
-                        <g class="featureImgContainer" style="transform: translate3d(0px, -700px, 0px);">
-                            <image width="1210" height="790" xlink:href="/images/dashboard.jpg"
-                                transform="matrix(0.4955 0 0 0.4955 195 347.6465)"></image>
-                            <image width="1210" height="790" xlink:href="/images/efficiency.jpg"
-                                transform="matrix(0.4955 0 0 0.4955 195 697)"></image>
-                            <image width="1210" height="790" xlink:href="/images/statistics.jpg"
-                                transform="matrix(0.4955 0 0 0.4955 195 1047.3535)"></image>
-                            <image width="1210" height="790" xlink:href="/images/conversion.jpg"
-                                transform="matrix(0.4955 0 0 0.4955 195 1397.707)"></image>
-                        </g>
-                    </g>
-
-                    <path class="computer" fill="none" stroke="#FFF" stroke-width="6" d="M856,726c0,22.1-17.9,40-40,40H175c-22.1,0-40-17.9-40-40H856z M558,728c0,22.1-27.9,20-50,20h-18
-	c-22.1,0-50,2.1-50-20 M187,317h618c11,0,20,9,20,20v369c0,11-9,20-20,20H187c-11,0-20-9-20-20V337C167,326,176,317,187,317z
-	 M203,347h586c3.3,0,6,2.7,6,6v337c0,3.3-2.7,6-6,6H203c-3.3,0-6-2.7-6-6V353C197,349.7,199.7,347,203,347z"
-                        style="stroke-dasharray: 5609.19; stroke-dashoffset: 0;"></path>
-
-
-                </svg>
-            </div>
-
-
-            <div class="slides txt-white">
-                <span class="counter ng-binding" data-ng-show="fc.curSlide >= 0">3 / 4</span>
-                <div class="slide" data-ng-class="{'active' : fc.curSlide === 0}">
-                    <h3>The Dashboard</h3>
-                    <p>The dashboard is your one-stop for information in Serio Verify. Costs, activities and key
-                        performance indicators are consolidated in a single screen, giving you an executive overview of
-                        your entire value chain.</p>
-                </div>
-                <div class="slide" data-ng-class="{'active' : fc.curSlide === 1}">
-                    <h3>Efficiency</h3>
-                    <p>See how fast you respond to consumer interest and how this affects your inside sales conversion.
-                    </p>
-                </div>
-                <div class="slide active" data-ng-class="{'active' : fc.curSlide === 2}">
-                    <h3>Statistics</h3>
-                    <p>Monitor your data cleansing and see trends for flows of interested consumers.</p>
-                </div>
-                <div class="slide" data-ng-class="{'active' : fc.curSlide === 3}">
-                    <h3>Conversion</h3>
-                    <p>Get insights into cost per new customer across multiple traffic sources and call centers.</p>
-                </div>
-            </div>
+        <div class="mobile-only">
+            <h1>How it<br>works</h1>
+            <h3>Instantly improve your inside sales</h3>
+            <p>Integrate traffic sources, apply state of the art data cleansing algorithms, and automate manual
+                processes. Serio Verify creates measurable and improved ROI on all your lead-to-call center activities.
+            </p>
         </div>
 
+
+        <div id="products-container" class="" style="transform: translate3d(0px, 258.5px, 0px);">
+            <div id="counters" class="counters">
+
+                <div class="counter counter--a">
+
+
+                    <svg class="check" id="check_a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.7 95.7"
+                        xml:space="preserve">
+                        <path fill="none" stroke="#18252a" stroke-width="8" stroke-miterlimit="10"
+                            d="M32.2,53 42.4,67 60.8,19.6 " style="stroke-dasharray: 69, 71; stroke-dashoffset: 70;">
+                        </path>
+                        <path fill="none" stroke="#18252a" stroke-width="6" stroke-miterlimit="10"
+                            d="M92.7,47.8c0,24.8-20.1,44.8-44.8,44.8 S3,72.6,3,47.8S23.1,3,47.8,3S92.7,23.1,92.7,47.8z"
+                            style="stroke-dasharray: 282, 284; stroke-dashoffset: 283;"></path>
+
+                    </svg>
+                    <h3 class="label">Average sales cycle</h3>
+                    <span class="number ng-binding">00:00</span>
+                    <h3>Avg. time<br><span>Hours</span></h3>
+                    <span class="number ng-binding">0</span>
+                    <h3>Avg. cost<br><span>Euro</span></h3>
+                </div>
+
+                <div class="counter counter--b">
+                    <svg class="check" id="check_b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.7 95.7"
+                        xml:space="preserve">
+                        <path fill="none" stroke="#18252a" stroke-width="8" stroke-miterlimit="10"
+                            d="M32.2,53 42.4,67 60.8,19.6 " style="stroke-dasharray: 69, 71; stroke-dashoffset: 70;">
+                        </path>
+                        <path fill="none" stroke="#18252a" stroke-width="6" stroke-miterlimit="10" d="M92.7,47.8c0,24.8-20.1,44.8-44.8,44.8
+	S3,72.6,3,47.8S23.1,3,47.8,3S92.7,23.1,92.7,47.8z" style="stroke-dasharray: 282, 284; stroke-dashoffset: 283;"></path>
+                    </svg>
+                    <h3 class="label">Serio verify</h3>
+                    <span class="number ng-binding">00:00</span>
+                    <h3>Avg. time<br><span>Hours</span></h3>
+                    <span class="number ng-binding">0</span>
+                    <h3>Avg. cost<br><span>Euro</span></h3>
+                </div>
+
+
+                <svg id="product-arrow" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 41"
+                    xml:space="preserve">
+                    <defs>
+                        <clipPath id="product-arrow--mask">
+                            <rect id="product-arrow-mask" y="-41" fill="#001177" width="26" height="41"></rect>
+                        </clipPath>
+                    </defs>
+                    <path fill="#3aafa9" d="M7.4,11.2v2.2h11.1v-2.2H7.4z M7.4,6.1v3.2h11.1V6.1H7.4z M7.4,0v4.1h11.1V0L7.4,0L7.4,0z M13,41l13-14.3
+	h-7.4V15.4H7.4v11.3H0L13,41z"></path>
+                </svg>
+            </div>
+
+
+            <div id="svg-container" style="transform: translate3d(0%, 0px, 0px);">
+                <svg class="anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4320 900">
+
+                    <!-- BASE -->
+                    <path fill="none" stroke="#dfdfdf" stroke-width="10" stroke-linecap="square" stroke-linejoin="bevel"
+                        stroke-miterlimit="10" d="M3681.5,345H779.8L664.5,450V0"></path>
+                    <path fill="none" stroke="#dfdfdf" stroke-width="10" stroke-miterlimit="10"
+                        d="M3635.5,555H778.2L664.5,450V0"></path>
+
+
+                    <!-- ANIMATED -->
+                    <path id="product-others" fill="none" stroke="#27363b" stroke-width="10" stroke-linecap="square"
+                        stroke-linejoin="bevel" stroke-miterlimit="10" d="M664.5,0 664.5,450 779.8,345 3635.5,345"
+                        style="stroke-dasharray: 3460.65; stroke-dashoffset: 3461.65;"></path>
+                    <path id="product-serio" fill="none" stroke="#3aafa9" stroke-linecap="square" stroke-width="10"
+                        stroke-miterlimit="10" d="M664.5,0 664.5,448	778.2,555 3635.5,555"
+                        style="stroke-dasharray: 3460.43; stroke-dashoffset: 3461.43;"></path>
+
+
+
+
+                    <!-- ICON BACKDROPS -->
+                    <rect x="1168.6" y="256.5" fill="#FFFFFF" width="151.2" height="405.7"></rect>
+                    <rect x="1620.4" y="453.2" fill="#FFFFFF" width="143.3" height="181.6"></rect>
+                    <rect x="2060.5" y="441.3" fill="#FFFFFF" width="159.7" height="173.4"></rect>
+                    <rect x="2056.3" y="261.7" fill="#FFFFFF" width="151.2" height="151.2"></rect>
+                    <rect x="2948.4" y="261.7" fill="#FFFFFF" width="181.6" height="121.7"></rect>
+                    <rect x="2517.5" y="467.5" fill="#FFFFFF" width="1200" height="183"></rect>
+                </svg>
+
+                <!-- ICONS FOR OLD LINE -->
+                <svg id="old_icon-1" class="anim svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4320 900">
+                    <path class="icon" stroke-miterlimit="10" d="M1222.5,346h-27v-72h90v72h-21 M1253.5,304h22 M1258.5,346h-30 M1253.5,316h22 M1253.5,328h22 M1253.5,292h12
+		 M1226.3,311c6.7,0,12.2-5.5,12.2-12.2c0-6.7-5.5-12.2-12.2-12.2s-12.2,5.5-12.2,12.2C1214.1,305.5,1219.6,311,1226.3,311z
+		 M1220.6,317l-9,3l-3.1,18 M1244.6,338l-3.1-18l-9-3" style="stroke-dasharray: 523, 525; stroke-dashoffset: 524;">
+                    </path>
+                </svg>
+                <svg id="old_icon-2" class="anim svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4320 900">
+                    <path class="icon" stroke-miterlimit="10"
+                        d="M2142,274l0,21h15.2l-24.1,36l0,0l-24.1-36h15.2l0-21 M2094.5,324v21h78v-21"
+                        style="stroke-dasharray: 280, 282; stroke-dashoffset: 281;"></path>
+                    <path class="icon" stroke-miterlimit="10" d="M2111,481"
+                        style="stroke-dasharray: 0, 2; stroke-dashoffset: 1;"></path>
+                    <path class="icon" stroke-miterlimit="10" d="M2111,497"
+                        style="stroke-dasharray: 0, 2; stroke-dashoffset: 1;"></path>
+                    <path class="icon" stroke-miterlimit="10" d="M2105.5,481"
+                        style="stroke-dasharray: 0, 2; stroke-dashoffset: 1;"></path>
+                    <path class="icon" stroke-miterlimit="10" d="M2090.5,481"
+                        style="stroke-dasharray: 0, 2; stroke-dashoffset: 1;"></path>
+                </svg>
+                <svg id="old_icon-3" class="anim svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4320 900">
+                    <path class="icon" stroke-miterlimit="10" d="M2979.3,345.7l2.9-18l9.1-2.9 M3015.2,345.7l-2.9-18l-9.1-2.9 M2997.2,294.7c-6.6,0-12,5.4-12,12
+		c0,6.6,5.4,12,12,12s12-5.4,12-12C3009.3,300.1,3003.9,294.7,2997.2,294.7z M3077.2,324.8l-9.1,2.9l-2.9,18 M3101.2,345.7l-2.9-18
+		l-9.1-2.9 M3083.2,294.7c-6.6,0-12,5.4-12,12c0,6.6,5.4,12,12,12c6.6,0,12-5.4,12-12C3095.2,300.1,3089.9,294.7,3083.2,294.7z
+		 M3025.2,318.7h27 M3040.2,330.7l12-12l-12-12" style="stroke-dasharray: 323, 325; stroke-dashoffset: 324;"></path>
+                </svg>
+                <svg id="old_icon-4" class="anim svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4320 900">
+                    <path class="icon" stroke-miterlimit="10"
+                        d="M3726.9,298.7c0-16.5,13.4-29.9,29.9-29.9s29.9,13.4,29.9,29.9 M3726.9,307.7c-8.3,0-15,6.7-15,15
+		s6.7,15,15,15V307.7z M3786.9,337.8c8.3,0,15-6.7,15-15s-6.7-15-15-15V337.8z M3759.7,340.5c-3.4,0-6.1,2.7-6.1,6.1
+		c0,3.4,2.7,6.1,6.1,6.1s6.1-2.7,6.1-6.1C3765.8,343.2,3763,340.5,3759.7,340.5z M3765.8,346.7h15c3.4,0,6.1-2.7,6.1-6.1v-2.8"
+                        style="stroke-dasharray: 314, 316; stroke-dashoffset: 315;"></path>
+                </svg>
+
+                <!-- ICONS FOR NEW LINE -->
+                <svg id="new_icon-1" class="anim svg-icon new" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 4320 900">
+                    <path class="icon" fill="none" stroke-width="6" stroke-miterlimit="10" d="M1222.5,555h-27v-72h90v72h-21 M1253.5,513h22 M1258.5,555h-30 M1253.5,525h22 M1253.5,537h22 M1253.5,501h12 M1226.3,520c6.7,0,12.2-5.5,12.2-12.2c0-6.7-5.5-12.2-12.2-12.2s-12.2,5.5-12.2,12.2C1214.1,514.5,1219.6,520,1226.3,520z
+		 M1220.6,526l-9,3l-3.1,18 M1244.6,547l-3.1-18l-9-3" style="stroke-dasharray: 523, 525; stroke-dashoffset: 524;">
+                    </path>
+                </svg>
+                <svg id="new_icon-2" class="anim svg-icon new" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 4320 900">
+                    <path class="icon" stroke-miterlimit="10" d="M1679.5,520.5L1658,487h72.5l-21.5,33.3 M1680.9,499.2l9.8,15.2 M1709.5,529h-30v13h30V529z M1691.3,555.9
+		c0,1.7,1.3,3,3,3s3-1.3,3-3s-1.3-3-3-3S1691.3,554.2,1691.3,555.9z M1697.1,478.8c0-1.6-1.3-2.9-2.9-2.9c-1.6,0-2.9,1.3-2.9,2.9
+		 M1709.3,478.6c0-8.3-6.7-15.1-15.1-15.1s-15.1,6.7-15.1,15.1"
+                        style="stroke-dasharray: 332, 334; stroke-dashoffset: 333;"></path>
+                </svg>
+                <svg id="new_icon-3" class="anim svg-icon new" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 4320 900">
+                    <path class="icon" stroke-miterlimit="10" d="M2090.5,481.1l15.1-1.3l1.3,15 M2170.7,525.3l1.2,15l15.1-1.2 M2105.6,479.8c-7.2,8-11.7,18.6-11.7,30.2
+		c0,24.8,20.1,44.9,44.9,44.9c8.7,0,16.9-2.5,23.8-6.8 M2171.9,540.3c7.3-8,11.8-18.7,11.8-30.4c0-24.8-20.1-44.9-44.9-44.9
+		c-8.8,0-17.1,2.5-24,6.9" style="stroke-dasharray: 319, 321; stroke-dashoffset: 320;"></path>
+                </svg>
+                <svg id="new_icon-4" class="anim svg-icon new" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 4320 900">
+                    <path class="icon" stroke-miterlimit="10" d="M2554.6,505.3c0-16.5,13.4-29.9,29.9-29.9s29.9,13.4,29.9,29.9 M2554.6,514.4c-8.3,0-15,6.7-15,15
+		c0,8.3,6.7,15,15,15V514.4z M2614.5,544.4c8.3,0,15-6.7,15-15c0-8.3-6.7-15-15-15V544.4z M2587.3,547.1c-3.4,0-6.1,2.7-6.1,6.1
+		s2.7,6.1,6.1,6.1s6.1-2.7,6.1-6.1S2590.7,547.1,2587.3,547.1z M2593.4,553.3h15c3.4,0,6.1-2.7,6.1-6.1v-2.8"
+                        style="stroke-dasharray: 315, 317; stroke-dashoffset: 316;"></path>
+                </svg>
+
+
+                <div class="title">
+                    <div class="txt">
+                        <h1>How it<br>works</h1>
+                        <h3>Instantly improve your inside sales</h3>
+                        <p>Integrate traffic sources, apply state of the art data cleansing algorithms, and automate
+                            manual processes. Serio Verify creates measurable and improved ROI on all your lead-to-call
+                            center activities.</p>
+                    </div>
+                </div>
+
+                <div class="txt old old-0">
+                    <h3>Average sales cycle</h3>
+                </div>
+                <div class="txt old old-1">
+                    <p>Consumer sign-up.</p>
+                </div>
+                <div class="txt old old-2">
+                    <p>Raw data accepted into your database.</p>
+                </div>
+                <div class="txt old old-3">
+                    <p>Manual distribution to call center.</p>
+                </div>
+                <div class="txt old old-4">
+                    <p>Consumer receives call.</p>
+                </div>
+
+                <div class="txt new new-0">
+                    <h3>Serio Verify</h3>
+                </div>
+                <div class="txt new new-1">
+                    <p>Consumer sign-up.</p>
+                </div>
+                <div class="txt new new-2">
+                    <p>Automated data cleansing applied.</p>
+                </div>
+                <div class="txt new new-3">
+                    <p>Automatic distribution to call center.</p>
+                </div>
+                <div class="txt new new-4">
+                    <p>Consumer receives call.</p>
+                </div>
+
+            </div>
+
+
+            <svg id="product_result" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900">
+                <path fill="#7FEA3F" d="M1492,1v899h1440V1H1492z M1733,361.6L1570,317v-89l163-25V361.6z M1965.4,486l-47-10l73-142.4l35,31.4
+	L1965.4,486z M2120.4,836l17-51l170-14l25,65H2120.4z M2454.4,478l-65-121l45-29l72,138L2454.4,478z"></path>
+                <path fill="none" stroke="#18252A" stroke-width="4" stroke-miterlimit="10" d="M132,324h-17v-42h54v42h-12 M151,300h13 M154,324
+	h-18 M151,306h13 M151,314h13 M151,292h7 M135.1,302.4c4.1,0,7.4-3.3,7.4-7.4c0-4.1-3.3-7.4-7.4-7.4s-7.4,3.3-7.4,7.4
+	C127.7,299.1,131,302.4,135.1,302.4z M131.6,306l-5.4,1.8l-1.9,10.9 M146.1,318.7l-1.9-10.9l-5.4-1.8"></path>
+                <path fill="none" stroke="#3AAFA9" stroke-width="4" stroke-miterlimit="10" d="M43,540H26v-43h54v43H68 M61,515h13 M64,540H46
+	 M61,522h13 M61,529h13 M61,508h7 M45.6,517.9c4.1,0,7.4-3.3,7.4-7.4c0-4.1-3.3-7.4-7.4-7.4s-7.4,3.3-7.4,7.4
+	C38.2,514.6,41.5,517.9,45.6,517.9z M42.1,521.5l-5.4,1.8l-1.9,10.9 M56.6,534.2l-1.9-10.9l-5.4-1.8"></path>
+                <path fill="none" stroke="#3AAFA9" stroke-width="4" stroke-miterlimit="10" d="M169,516.6L156,497h43.8l-13,19.7 M169.8,503
+	l5.9,9.2 M187,529h-18v-8h18V529z M177.9,535.4c1,0,1.8,0.8,1.8,1.8c0,1-0.8,1.8-1.8,1.8s-1.8-0.8-1.8-1.8
+	C176.1,536.2,176.9,535.4,177.9,535.4z M176.1,490.7c0-1,0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8 M168.8,490.6c0-5,4.1-9.1,9.1-9.1
+	s9.1,4.1,9.1,9.1"></path>
+                <path fill="none" stroke="#18252A" stroke-width="4" stroke-miterlimit="10" d="M367.7,281.5l0,13.5h9.2l-14.5,21.7l0,0L347.8,295
+	h9.2l0-13.1 M338,311v13h46v-13"></path>
+                <path fill="none" stroke="#3AAFA9" stroke-width="4" stroke-miterlimit="10" d="M284.3,502.7l-0.8-9l-9.1,0.8 M322.8,521.2l0.7,9
+	l9.1-0.7 M283.5,493.7c-4.4,4.8-7,11.2-7,18.2c0,15,12.1,27.1,27.1,27.1c5.3,0,10.2-1.5,14.4-4.1 M323.6,530.3
+	c4.4-4.8,7.1-11.3,7.1-18.3c0-15-12.1-27.1-27.1-27.1c-5.3,0-10.3,1.5-14.5,4.2"></path>
+                <path fill="none" stroke="#3AAFA9" stroke-width="4" stroke-miterlimit="10" d="M442.4,506.4c0-10-8.1-18.1-18.1-18.1
+	c-10,0-18.1,8.1-18.1,18.1 M406.2,511.9c-5,0-9.1,4.1-9.1,9.1s4.1,9.1,9.1,9.1V511.9z M442.4,530c5,0,9.1-4.1,9.1-9.1
+	s-4.1-9.1-9.1-9.1V530z M426,531.7c-2,0-3.7,1.6-3.7,3.7s1.6,3.7,3.7,3.7c2,0,3.7-1.6,3.7-3.7S428,531.7,426,531.7z M429.7,535.4h9
+	c2,0,3.7-1.6,3.7-3.7V530"></path>
+                <path fill="none" stroke="#18252A" stroke-width="4" stroke-miterlimit="10" d="M802.9,290.9c0-10-8.1-18.1-18.1-18.1
+	s-18.1,8.1-18.1,18.1 M766.7,296.4c-5,0-9.1,4.1-9.1,9.1c0,5,4.1,9.1,9.1,9.1V296.4z M802.9,314.5c5,0,9.1-4.1,9.1-9.1
+	s-4.1-9.1-9.1-9.1V314.5z M786.5,316.2c-2,0-3.7,1.6-3.7,3.7s1.6,3.7,3.7,3.7s3.7-1.6,3.7-3.7S788.6,316.2,786.5,316.2z
+	 M790.2,319.9h9c2,0,3.7-1.6,3.7-3.7v-1.7"></path>
+                <path fill="none" stroke="#18252A" stroke-width="4" stroke-miterlimit="10" d="M542.6,307.9l-5.5,1.7l-1.8,10.9 M557.1,320.5
+	l-1.8-10.9l-5.5-1.7 M546.3,289.7c-4,0-7.3,3.2-7.3,7.3c0,4,3.2,7.3,7.3,7.3s7.3-3.2,7.3-7.3C553.5,293,550.3,289.7,546.3,289.7z
+	 M594.6,307.9l-5.5,1.7l-1.8,10.9 M609,320.5l-1.8-10.9l-5.5-1.7 M598.2,289.7c-4,0-7.3,3.2-7.3,7.3c0,4,3.2,7.3,7.3,7.3
+	s7.3-3.2,7.3-7.3C605.4,293,602.2,289.7,598.2,289.7z M563.1,304.2h16.3 M572.2,311.4l7.2-7.2l-7.2-7.2"></path>
+                <path fill="none" stroke="#18252A" stroke-width="10" stroke-linecap="square" stroke-linejoin="bevel"
+                    stroke-miterlimit="10" d="
+	M0.5,350.2h789.7 M144.8,343.1c-3.9,0-7.1,3.2-7.1,7.1s3.2,7.1,7.1,7.1s7.1-3.2,7.1-7.1S148.7,343.1,144.8,343.1z M359,343.1
+	c-3.9,0-7.1,3.2-7.1,7.1s3.2,7.1,7.1,7.1c3.9,0,7.1-3.2,7.1-7.1S362.9,343.1,359,343.1z M573.3,343.1c-3.9,0-7.1,3.2-7.1,7.1
+	s3.2,7.1,7.1,7.1s7.1-3.2,7.1-7.1S577.2,343.1,573.3,343.1z M787.5,343.1c-3.9,0-7.1,3.2-7.1,7.1s3.2,7.1,7.1,7.1s7.1-3.2,7.1-7.1
+	S791.4,343.1,787.5,343.1z"></path>
+                <path fill="none" stroke="#3AAFA9" stroke-width="10" stroke-linecap="square" stroke-linejoin="bevel"
+                    stroke-miterlimit="10" d="
+	M0.5,567h424.9 M54.3,560c-3.9,0-7.1,3.2-7.1,7.1c0,3.9,3.2,7.1,7.1,7.1s7.1-3.2,7.1-7.1C61.4,563.2,58.2,560,54.3,560z M178.1,560
+	c-3.9,0-7.1,3.2-7.1,7.1c0,3.9,3.2,7.1,7.1,7.1s7.1-3.2,7.1-7.1C185.2,563.2,182,560,178.1,560z M301.9,560c-3.9,0-7.1,3.2-7.1,7.1
+	c0,3.9,3.2,7.1,7.1,7.1s7.1-3.2,7.1-7.1C309,563.2,305.8,560,301.9,560z M425.7,560c-3.9,0-7.1,3.2-7.1,7.1c0,3.9,3.2,7.1,7.1,7.1
+	c3.9,0,7.1-3.2,7.1-7.1C432.8,563.2,429.6,560,425.7,560z"></path>
+            </svg>
+        </div>
+
+
     </section>
+
+
+
+
+
+
 </div>

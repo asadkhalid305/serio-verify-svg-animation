@@ -2,7 +2,7 @@
   <div id="home">
     <div id="container">
       <Intro />
-      <Intro2 />
+      <Works />
       <Outcome />
       <Quality />
       <Profitability />
@@ -13,7 +13,7 @@
 
 <script>
 import Intro from "../components/intro";
-import Intro2 from "../components/intro2";
+import Works from "../components/works";
 import Outcome from "../components/outcome";
 import Quality from "../components/quality";
 import Profitability from "../components/profitability";
@@ -28,7 +28,14 @@ export default {
       sectionsHeight: []
     };
   },
-  components: { Intro, Intro2, Outcome, Quality, Profitability, Features },
+  components: {
+    Intro,
+    Works,
+    Outcome,
+    Quality,
+    Profitability,
+    Features
+  },
   computed: mapGetters(["sectionsEndingPerc"]),
   methods: {
     ...mapActions(["getSectionsPercetages"])
@@ -43,7 +50,9 @@ export default {
 <style scoped>
 #container {
   position: relative;
-  height: 1000vh;
+  height: 4475.5vh;
   width: 100%;
+  overflow: hidden;
+  background-color: rgb(129, 167, 164);
 }
 </style>

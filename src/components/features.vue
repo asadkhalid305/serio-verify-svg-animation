@@ -1,5 +1,5 @@
 <template>
-  <section id="section5">
+  <section id="section6">
     <div id="features-container" class="fixed-container">
       <div class="svg-container">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900">
@@ -212,14 +212,14 @@ export default {
   },
   computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
   methods: {
-    ...mapActions(["getDocumentHeightPercentage"]),
+    ...mapActions(["getDocumentHeightPercentage", "getSectionsClientHeight"]),
 
     //event on scroll
     handleScroll() {
       this.getDocumentHeightPercentage();
       this.initial = this.sectionsEndingPerc.section5;
       let start = this.initial;
-      window.console.log(start);
+      // window.console.log(start);
       // window.console.log(this.docHeightPerc);
 
       if (this.docHeightPerc < start) {
@@ -231,10 +231,10 @@ export default {
           // this.svg10e,
           this.svg11
         ]);
-        document.querySelector(".fixed-container").style.position = "static";
+        // document.querySelector(".fixed-container").style.position = "static";
       }
       if (this.docHeightPerc >= start) {
-        document.querySelector(".fixed-container").style.position = "fixed";
+        // document.querySelector(".fixed-container").style.position = "fixed";
 
         if (this.docHeightPerc <= start + 3) {
           this.drawPath(this.svg10a, start, start + 3);
@@ -301,9 +301,30 @@ export default {
         }
       }
 
-      if (this.docHeightPerc > start + 25) {
-        document.querySelector(".fixed-container").style.position = "static";
+      // if (this.docHeightPerc > start + 25) {
+      //   document.querySelector(".fixed-container").style.position = "static";
+      // }
+
+      // handling section2 scroll starts
+      if (this.docHeightPerc < start) {
+        document.querySelector(".fixed-container").style.position = "relative";
+      } else if (this.docHeightPerc >= start) {
+        document.querySelector(".fixed-container").style.position = "fixed";
+        document.querySelector(
+          ".fixed-container"
+        ).style.transform = `translateY(0px)`;
       }
+      if (
+        window.scrollY >=
+        this.sectionsClientHeight.section6 - this.sectionsClientHeight.section1
+      ) {
+        document.querySelector(
+          ".fixed-container"
+        ).style.transform = `translateY(${(window.scrollY -
+          this.sectionsClientHeight.section6) *
+          -1}px)`;
+      }
+      // handling section2 scroll ends
     },
 
     //draw line
@@ -356,6 +377,11 @@ export default {
       // this.svg10e,
       this.svg11
     ]);
+
+    this.getSectionsClientHeight({
+      sectionId: "section6",
+      sectionClientHeight: document.querySelector("#section6").offsetHeight
+    });
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -364,7 +390,7 @@ export default {
 </script>
 
 <style lang="scss">
-#section5 {
+#section6 {
   cursor: default;
   font: 100%/1.5 sans-serif;
   text-rendering: optimizeLegibility;
@@ -391,6 +417,7 @@ export default {
     height: 100vh;
     background-color: #557c83;
     width: 100%;
+    transform: translateY(0px);
   }
 
   #product-computer {
