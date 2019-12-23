@@ -286,7 +286,7 @@ export default {
   },
   computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
   methods: {
-    ...mapActions(["getDocumentHeightPercentage"]),
+    ...mapActions(["getDocumentHeightPercentage", "getSectionsClientHeight"]),
 
     //event on scroll
     handleScroll() {
@@ -629,6 +629,11 @@ export default {
       this.svg5i,
       this.svg5j
     ]);
+
+    this.getSectionsClientHeight({
+      sectionId: "section3",
+      sectionClientHeight: document.querySelector("#section3").offsetHeight
+    });
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);

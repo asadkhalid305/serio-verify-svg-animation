@@ -200,7 +200,7 @@
           </div>
           <svg
             id="new_icon-1"
-            class="anim svg-icon new"
+            class="anim svg-icon new icon-1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 4320 900"
           >
@@ -412,7 +412,7 @@ export default {
         this.drawPath(this.s2path1, start, start + 14);
         this.drawPath(this.s2path2, start, start + 14);
 
-        // window.console.log(this.svgStatus(this.s2path1));
+        window.console.log(this.svgStatus(this.s2path1));
         //animatins on svg progress starts
         if (Math.floor(this.svgStatus(this.s2path1)) < 18) {
           document.querySelectorAll(".new-0, .old-0").forEach(el => {
@@ -434,6 +434,66 @@ export default {
 
         if (Math.floor(this.svgStatus(this.s2path1)) >= 28) {
           document.querySelectorAll(".label").forEach(el => {
+            el.style.opacity = "1";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) < 31) {
+          document.querySelectorAll("#old_icon-1, #new_icon-1").forEach(el => {
+            el.style.opacity = "0";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 31) {
+          document.querySelectorAll("#old_icon-1, #new_icon-1").forEach(el => {
+            el.style.opacity = "1";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) < 41) {
+          document.querySelectorAll("#new_icon-2").forEach(el => {
+            el.style.opacity = "0";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 41) {
+          document.querySelectorAll("#new_icon-2").forEach(el => {
+            el.style.opacity = "1";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) < 54) {
+          document.querySelectorAll("#old_icon-2, #new_icon-3").forEach(el => {
+            el.style.opacity = "0";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 54) {
+          document.querySelectorAll("#old_icon-2, #new_icon-3").forEach(el => {
+            el.style.opacity = "1";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) < 80) {
+          document.querySelectorAll("#old_icon-3").forEach(el => {
+            el.style.opacity = "0";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 80) {
+          document.querySelectorAll("#old_icon-3").forEach(el => {
+            el.style.opacity = "1";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) < 100) {
+          document.querySelectorAll("#old_icon-4").forEach(el => {
+            el.style.opacity = "0";
+          });
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 100) {
+          document.querySelectorAll("#old_icon-4").forEach(el => {
             el.style.opacity = "1";
           });
         }
@@ -633,6 +693,8 @@ export default {
     top: 0;
     left: 0;
     stroke-width: 6px;
+    opacity: 0;
+    transition: opacity 0.7s ease;
   }
 
   .txt.old.old-0,
@@ -707,6 +769,7 @@ export default {
       #check_a,
       #check_b {
         opacity: 0;
+        transition: opacity 0.5s ease;
       }
     }
 
@@ -770,7 +833,7 @@ export default {
     }
 
     .arrow {
-      transition: opacity 0.5s ease 0.4s, bottom 0.7s ease 0.4s;
+      transition: opacity 0.3s ease 0.2s, bottom 0.5s ease 0.2s;
       opacity: 0;
       bottom: 20%;
       position: absolute;

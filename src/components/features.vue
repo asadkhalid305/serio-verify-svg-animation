@@ -210,43 +210,58 @@ export default {
       screenNo: 1
     };
   },
-  computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
+  computed: mapGetters([
+    "docHeightPerc",
+    "sectionsEndingPerc",
+    "sectionsClientHeight"
+  ]),
   methods: {
     ...mapActions(["getDocumentHeightPercentage", "getSectionsClientHeight"]),
 
     //event on scroll
     handleScroll() {
       this.getDocumentHeightPercentage();
-      this.initial = this.sectionsEndingPerc.section5;
-      let start = this.initial;
-      // window.console.log(start);
-      // window.console.log(this.docHeightPerc);
+      let start = this.sectionsEndingPerc.section5;
 
+      // handling section2 scroll starts
       if (this.docHeightPerc < start) {
-        this.unFill([
-          this.svg10a,
-          this.svg10b,
-          // this.svg10c,
-          // this.svg10d,
-          // this.svg10e,
-          this.svg11
-        ]);
-        // document.querySelector(".fixed-container").style.position = "static";
+        document.querySelector(".fixed-container").style.position = "relative";
+      } else if (this.docHeightPerc >= start) {
+        document.querySelector(".fixed-container").style.position = "fixed";
+        document.querySelector(
+          ".fixed-container"
+        ).style.transform = `translateY(0px)`;
+      }
+
+      let allSectionsHeightInPx =
+        this.sectionsClientHeight.section6 +
+        this.sectionsClientHeight.section5 +
+        this.sectionsClientHeight.section4 +
+        this.sectionsClientHeight.section3 +
+        this.sectionsClientHeight.section2 +
+        this.sectionsClientHeight.section1;
+
+      if (window.scrollY >= allSectionsHeightInPx) {
+        document.querySelector(
+          ".fixed-container"
+        ).style.transform = `translateY(${(window.scrollY -
+          allSectionsHeightInPx) *
+          -1}px)`;
+      }
+      // handling section2 scroll ends
+
+      //svg handle starts
+      if (this.docHeightPerc < start) {
+        this.unFill([this.svg10a, this.svg10b, this.svg11]);
       }
       if (this.docHeightPerc >= start) {
-        // document.querySelector(".fixed-container").style.position = "fixed";
-
         if (this.docHeightPerc <= start + 3) {
           this.drawPath(this.svg10a, start, start + 3);
-          // this.unFill([this.svg10c, this.svg10d, this.svg10e]);
         }
 
         if (this.docHeightPerc <= start + 20) {
           this.drawPath(this.svg11, start, start + 20);
-          this.unFill([
-            this.svg10b
-            // this.svg10c, this.svg10d, this.svg10e
-          ]);
+          this.unFill([this.svg10b]);
         }
       }
 
@@ -300,31 +315,6 @@ export default {
             "Get insights into cost per new customer across multiple traffic sources and call centers.";
         }
       }
-
-      // if (this.docHeightPerc > start + 25) {
-      //   document.querySelector(".fixed-container").style.position = "static";
-      // }
-
-      // handling section2 scroll starts
-      if (this.docHeightPerc < start) {
-        document.querySelector(".fixed-container").style.position = "relative";
-      } else if (this.docHeightPerc >= start) {
-        document.querySelector(".fixed-container").style.position = "fixed";
-        document.querySelector(
-          ".fixed-container"
-        ).style.transform = `translateY(0px)`;
-      }
-      if (
-        window.scrollY >=
-        this.sectionsClientHeight.section6 - this.sectionsClientHeight.section1
-      ) {
-        document.querySelector(
-          ".fixed-container"
-        ).style.transform = `translateY(${(window.scrollY -
-          this.sectionsClientHeight.section6) *
-          -1}px)`;
-      }
-      // handling section2 scroll ends
     },
 
     //draw line
@@ -364,19 +354,9 @@ export default {
 
     this.svg10a = document.querySelector("#svg_10a");
     this.svg10b = document.querySelector("#svg_10b");
-    // this.svg10c = document.querySelector("#svg_10c");
-    // this.svg10d = document.querySelector("#svg_10d");
-    // this.svg10e = document.querySelector("#svg_10e");
     this.svg11 = document.querySelector("#svg_11");
 
-    this.setDashArrayAndOffset([
-      this.svg10a,
-      this.svg10b,
-      // this.svg10c,
-      // this.svg10d,
-      // this.svg10e,
-      this.svg11
-    ]);
+    this.setDashArrayAndOffset([this.svg10a, this.svg10b, this.svg11]);
 
     this.getSectionsClientHeight({
       sectionId: "section6",
@@ -406,7 +386,7 @@ export default {
   padding: 0;
   z-index: 2;
   position: relative;
-  height: 400vh;
+  height: 1100vh;
   width: 100%;
   bottom: 0;
   background-color: #557c83;

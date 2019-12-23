@@ -202,12 +202,12 @@ export default {
   },
   computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
   methods: {
-    ...mapActions(["getDocumentHeightPercentage"]),
+    ...mapActions(["getDocumentHeightPercentage", "getSectionsClientHeight"]),
 
     //event on scroll
     handleScroll() {
       this.getDocumentHeightPercentage();
-      let start = this.sectionsEndingPerc.section3 + 7;
+      let start = this.sectionsEndingPerc.section3 + 1.4;
       // window.console.log(start);
 
       if (this.docHeightPerc < start) {
@@ -230,9 +230,9 @@ export default {
         ]);
       } else if (
         this.docHeightPerc >= start &&
-        this.docHeightPerc <= start + 3
+        this.docHeightPerc < start + 1
       ) {
-        this.drawPath(this.svg8a, start, start + 3);
+        this.drawPath(this.svg8a, start, start + 1);
         this.unFill([
           this.svg8b,
           this.svg9a,
@@ -250,15 +250,15 @@ export default {
           this.svg9m
         ]);
       } else if (
-        this.docHeightPerc >= start + 3 &&
-        this.docHeightPerc <= start + 5.6
+        this.docHeightPerc >= start + 1 &&
+        this.docHeightPerc < start + 2.3
       ) {
         document.querySelector(".txt2").style.opacity = "1";
         if (
-          this.docHeightPerc >= start + 3 &&
-          this.docHeightPerc < start + 3.2
+          this.docHeightPerc >= start + 1 &&
+          this.docHeightPerc < start + 1.1
         ) {
-          this.drawPath(this.svg9a, start + 3, start + 3.2);
+          this.drawPath(this.svg9a, start + 1, start + 1.1);
           this.fill([this.svg8a]);
           this.unFill([
             this.svg8b,
@@ -276,10 +276,10 @@ export default {
             this.svg9m
           ]);
         } else if (
-          this.docHeightPerc >= start + 3.2 &&
-          this.docHeightPerc < start + 3.4
+          this.docHeightPerc >= start + 1.1 &&
+          this.docHeightPerc < start + 1.2
         ) {
-          this.drawPath(this.svg9b, start + 3.2, start + 3.4);
+          this.drawPath(this.svg9b, start + 1.1, start + 1.2);
           // document.querySelector(".txt4").style.opacity = "0";
           this.fill([this.svg8a, this.svg9a]);
           this.unFill([
@@ -297,10 +297,10 @@ export default {
             this.svg9m
           ]);
         } else if (
-          this.docHeightPerc >= start + 3.4 &&
-          this.docHeightPerc < start + 3.6
+          this.docHeightPerc >= start + 1.2 &&
+          this.docHeightPerc < start + 1.3
         ) {
-          this.drawPath(this.svg9c, start + 3.4, start + 3.6);
+          this.drawPath(this.svg9c, start + 1.2, start + 1.3);
           document.querySelector(".txt4").style.opacity = "1";
           this.fill([this.svg8a, this.svg9a, this.svg9b]);
           this.unFill([
@@ -317,10 +317,10 @@ export default {
             this.svg9m
           ]);
         } else if (
-          this.docHeightPerc >= start + 3.6 &&
-          this.docHeightPerc <= start + 3.8
+          this.docHeightPerc >= start + 1.3 &&
+          this.docHeightPerc <= start + 1.4
         ) {
-          this.drawPath(this.svg9d, start + 3.6, start + 3.8);
+          this.drawPath(this.svg9d, start + 1.3, start + 1.4);
           this.fill([this.svg8a, this.svg9a, this.svg9b, this.svg9c]);
           this.unFill([
             this.svg8b,
@@ -335,10 +335,10 @@ export default {
             this.svg9m
           ]);
         } else if (
-          this.docHeightPerc >= start + 3.8 &&
-          this.docHeightPerc <= start + 4
+          this.docHeightPerc >= start + 1.4 &&
+          this.docHeightPerc <= start + 1.5
         ) {
-          this.drawPath(this.svg9e, start + 3.8, start + 4);
+          this.drawPath(this.svg9e, start + 1.4, start + 1.5);
           this.fill([
             this.svg8a,
             this.svg9a,
@@ -358,10 +358,10 @@ export default {
             this.svg9m
           ]);
         } else if (
-          this.docHeightPerc >= start + 4 &&
-          this.docHeightPerc <= start + 4.2
+          this.docHeightPerc >= start + 1.5 &&
+          this.docHeightPerc <= start + 1.6
         ) {
-          this.drawPath(this.svg9f, start + 4, start + 4.2);
+          this.drawPath(this.svg9f, start + 1.5, start + 1.6);
           this.fill([
             this.svg8a,
             this.svg9a,
@@ -381,10 +381,10 @@ export default {
             this.svg9m
           ]);
         } else if (
-          this.docHeightPerc >= start + 4.2 &&
-          this.docHeightPerc <= start + 4.4
+          this.docHeightPerc >= start + 1.6 &&
+          this.docHeightPerc <= start + 1.7
         ) {
-          this.drawPath(this.svg9g, start + 4.2, start + 4.4);
+          this.drawPath(this.svg9g, start + 1.6, start + 1.7);
           this.fill([
             this.svg8a,
             this.svg9a,
@@ -404,10 +404,10 @@ export default {
             this.svg9m
           ]);
         } else if (
-          this.docHeightPerc >= start + 4.4 &&
-          this.docHeightPerc <= start + 4.6
+          this.docHeightPerc >= start + 1.7 &&
+          this.docHeightPerc <= start + 1.8
         ) {
-          this.drawPath(this.svg9h, start + 4.4, start + 4.6);
+          this.drawPath(this.svg9h, start + 1.7, start + 1.8);
           this.fill([
             this.svg8a,
             this.svg9a,
@@ -427,10 +427,10 @@ export default {
             this.svg9m
           ]);
         } else if (
-          this.docHeightPerc >= start + 4.6 &&
-          this.docHeightPerc <= start + 4.8
+          this.docHeightPerc >= start + 1.8 &&
+          this.docHeightPerc <= start + 1.9
         ) {
-          this.drawPath(this.svg9i, start + 4.6, start + 4.8);
+          this.drawPath(this.svg9i, start + 1.8, start + 1.9);
           this.fill([
             this.svg8a,
             this.svg9a,
@@ -450,10 +450,10 @@ export default {
             this.svg9m
           ]);
         } else if (
-          this.docHeightPerc >= start + 4.8 &&
-          this.docHeightPerc <= start + 5.0
+          this.docHeightPerc >= start + 1.9 &&
+          this.docHeightPerc <= start + 2
         ) {
-          this.drawPath(this.svg9j, start + 4.8, start + 5.0);
+          this.drawPath(this.svg9j, start + 1.9, start + 2);
           this.fill([
             this.svg8a,
             this.svg9a,
@@ -468,10 +468,10 @@ export default {
           ]);
           this.unFill([this.svg8b, this.svg9k, this.svg9l, this.svg9m]);
         } else if (
-          this.docHeightPerc >= start + 5.0 &&
-          this.docHeightPerc <= start + 5.2
+          this.docHeightPerc >= start + 2 &&
+          this.docHeightPerc <= start + 2.1
         ) {
-          this.drawPath(this.svg9k, start + 5.0, start + 5.2);
+          this.drawPath(this.svg9k, start + 2, start + 2.1);
           this.fill([
             this.svg8a,
             this.svg9a,
@@ -487,10 +487,10 @@ export default {
           ]);
           this.unFill([this.svg8b, this.svg9l, this.svg9m]);
         } else if (
-          this.docHeightPerc >= start + 5.2 &&
-          this.docHeightPerc <= start + 5.4
+          this.docHeightPerc >= start + 2.1 &&
+          this.docHeightPerc <= start + 2.2
         ) {
-          this.drawPath(this.svg9l, start + 5.2, start + 5.4);
+          this.drawPath(this.svg9l, start + 2.1, start + 2.2);
           this.fill([
             this.svg8a,
             this.svg9a,
@@ -507,10 +507,10 @@ export default {
           ]);
           this.unFill([this.svg8b, this.svg9m]);
         } else if (
-          this.docHeightPerc >= start + 5.4 &&
-          this.docHeightPerc <= start + 5.6
+          this.docHeightPerc >= start + 2.2 &&
+          this.docHeightPerc <= start + 2.3
         ) {
-          this.drawPath(this.svg9m, start + 5.4, start + 5.6);
+          this.drawPath(this.svg9m, start + 2.2, start + 2.3);
           this.fill([
             this.svg8a,
             this.svg9a,
@@ -529,10 +529,10 @@ export default {
           this.unFill([this.svg8b]);
         }
       } else if (
-        this.docHeightPerc >= start + 5.7 &&
-        this.docHeightPerc <= start + 8.7
+        this.docHeightPerc >= start + 2.3 &&
+        this.docHeightPerc < start + 3
       ) {
-        this.drawPath(this.svg8b, start + 5.7, start + 8.7);
+        this.drawPath(this.svg8b, start + 2.3, start + 3);
         this.fill([
           this.svg8a,
           this.svg9a,
@@ -549,7 +549,7 @@ export default {
           this.svg9l,
           this.svg9m
         ]);
-      } else if (this.docHeightPerc > start + 8.7) {
+      } else if (this.docHeightPerc >= start + 2.8) {
         this.fill([
           this.svg8a,
           this.svg8b,
@@ -636,6 +636,11 @@ export default {
       this.svg9l,
       this.svg9m
     ]);
+
+    this.getSectionsClientHeight({
+      sectionId: "section5",
+      sectionClientHeight: document.querySelector("#section5").offsetHeight
+    });
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
