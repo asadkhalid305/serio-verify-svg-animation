@@ -19,7 +19,7 @@ import Quality from "../components/quality";
 import Profitability from "../components/profitability";
 import Features from "../components/features";
 
-import { mapGetters, mapActions } from "vuex";
+import { mapActions } from "vuex";
 
 export default {
   name: "home",
@@ -36,13 +36,11 @@ export default {
     Profitability,
     Features
   },
-  computed: mapGetters(["sectionsEndingPerc"]),
   methods: {
     ...mapActions(["getSectionsPercetages"])
   },
   mounted() {
     this.getSectionsPercetages();
-    // window.console.log(this.sectionsEndingPerc);
   }
 };
 </script>
@@ -53,6 +51,6 @@ export default {
   height: 4475.5vh;
   width: 100%;
   overflow: hidden;
-  background-color: rgb(129, 167, 164);
+  background-color: #111;
 }
 </style>

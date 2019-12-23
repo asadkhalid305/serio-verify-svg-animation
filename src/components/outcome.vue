@@ -21,21 +21,21 @@
           id="svg_3a"
           fill="none"
           stroke-width="10"
-          stroke="#233034"
+          stroke="#111"
           d="M972,0v52"
         ></path>
         <path
           id="svg_3b"
           fill="none"
           stroke-width="10"
-          stroke="#233034"
+          stroke="#111"
           d="M554,513h234V242h184v-62"
         ></path>
         <path
           id="svg_3c"
           fill="none"
           stroke-width="10"
-          stroke="#233034"
+          stroke="#111"
           d="M64,513H0"
         ></path>
 
@@ -117,40 +117,40 @@
         <!-- efficiency layer 1 starts-->
         <g class="eff-title">
           <path
-            fill="#233034"
+            fill="#111"
             d="M122.3,540.6h-40v-55.2h39.2v14.2h-21.2v6h20v14.2h-20v6.4h22V540.6z"
           ></path>
           <path
-            fill="#233034"
+            fill="#111"
             d="M169.1,499.6h-20.4v8.6h19.2v14.2h-19.2v18.2h-18v-55.2h38.4V499.6z"
           ></path>
           <path
-            fill="#233034"
+            fill="#111"
             d="M215.1,499.6h-20.4v8.6h19.2v14.2h-19.2v18.2h-18v-55.2h38.4V499.6z"
           ></path>
-          <path fill="#233034" d="M240.7,540.6h-18.1v-55.2h18.1V540.6z"></path>
+          <path fill="#111" d="M240.7,540.6h-18.1v-55.2h18.1V540.6z"></path>
           <path
-            fill="#233034"
+            fill="#111"
             d="M297.5,534.6c-2,2-7.6,7-19.6,7c-16.4,0-29.6-10.1-29.6-28.5s13.2-28.5,29.6-28.5c12.4,0,18.4,5.2,18.4,5.2
 					l-4.8,15.2c0,0-5.6-4.8-12.4-4.8c-6.8,0-12.6,4-12.6,12.6c0,8.6,6.2,12.4,12.6,12.4c6.4,0,10.8-2.6,13.2-5L297.5,534.6z"
           ></path>
-          <path fill="#233034" d="M321.6,540.6h-18.1v-55.2h18.1V540.6z"></path>
+          <path fill="#111" d="M321.6,540.6h-18.1v-55.2h18.1V540.6z"></path>
           <path
-            fill="#233034"
+            fill="#111"
             d="M371.6,540.6h-40v-55.2h39.2v14.2h-21.2v6h20v14.2h-20v6.4h22V540.6z"
           ></path>
           <path
-            fill="#233034"
+            fill="#111"
             d="M432.8,540.6H414l-16.8-30.8c0,0,0.4,6,0.4,10v20.8H380v-55.2h19.6l16,30.8c0,0-0.4-6-0.4-10v-20.8h17.6
 					V540.6z"
           ></path>
           <path
-            fill="#233034"
+            fill="#111"
             d="M489.6,534.6c-2,2-7.6,7-19.6,7c-16.4,0-29.6-10.1-29.6-28.5s13.2-28.5,29.6-28.5c12.4,0,18.4,5.2,18.4,5.2
 					l-4.8,15.2c0,0-5.6-4.8-12.4-4.8c-6.8,0-12.6,4-12.6,12.6c0,8.6,6.2,12.4,12.6,12.4c6.4,0,10.8-2.6,13.2-5L489.6,534.6z"
           ></path>
           <path
-            fill="#233034"
+            fill="#111"
             d="M546.4,485.4L527.2,519v21.6h-18.1V519L490,485.4h20l8.2,18.6l8.2-18.6H546.4z"
           ></path>
         </g>
@@ -164,21 +164,21 @@
           id="svg_4a"
           fill="none"
           stroke-width="10"
-          stroke="#3AAFA9"
+          stroke="#ffdf86"
           d="M972,0v52"
         ></path>
         <path
           id="svg_4b"
           fill="none"
           stroke-width="10"
-          stroke="#3AAFA9"
+          stroke="#ffdf86"
           d="M554,513h234V242h184v-62"
         ></path>
         <path
           id="svg_4c"
           fill="none"
           stroke-width="10"
-          stroke="#3AAFA9"
+          stroke="#ffdf86"
           d="M64,513H0"
         ></path>
 
@@ -187,35 +187,35 @@
           id="svg_5a"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M122.3,540.6h-40v-55.2h39.2v14.2h-21.2v6h20v14.2h-20v6.4h22V540.6z"
         ></path>
         <path
           id="svg_5b"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M169.1,499.6h-20.4v8.6h19.2v14.2h-19.2v18.2h-18v-55.2h38.4V499.6z"
         ></path>
         <path
           id="svg_5c"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M215.1,499.6h-20.4v8.6h19.2v14.2h-19.2v18.2h-18v-55.2h38.4V499.6z"
         ></path>
         <path
           id="svg_5d"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M240.7,540.6h-18.1v-55.2h18.1V540.6z"
         ></path>
         <path
           id="svg_5e"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M297.5,534.6c-2,2-7.6,7-19.6,7c-16.4,0-29.6-10.1-29.6-28.5s13.2-28.5,29.6-28.5c12.4,0,18.4,5.2,18.4,5.2
 					l-4.8,15.2c0,0-5.6-4.8-12.4-4.8c-6.8,0-12.6,4-12.6,12.6c0,8.6,6.2,12.4,12.6,12.4c6.4,0,10.8-2.6,13.2-5L297.5,534.6z"
         ></path>
@@ -223,21 +223,21 @@
           id="svg_5f"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M321.6,540.6h-18.1v-55.2h18.1V540.6z"
         ></path>
         <path
           id="svg_5g"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M371.6,540.6h-40v-55.2h39.2v14.2h-21.2v6h20v14.2h-20v6.4h22V540.6z"
         ></path>
         <path
           id="svg_5h"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M432.8,540.6H414l-16.8-30.8c0,0,0.4,6,0.4,10v20.8H380v-55.2h19.6l16,30.8c0,0-0.4-6-0.4-10v-20.8h17.6
 					V540.6z"
         ></path>
@@ -245,7 +245,7 @@
           id="svg_5i"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M489.6,534.6c-2,2-7.6,7-19.6,7c-16.4,0-29.6-10.1-29.6-28.5s13.2-28.5,29.6-28.5c12.4,0,18.4,5.2,18.4,5.2
 					l-4.8,15.2c0,0-5.6-4.8-12.4-4.8c-6.8,0-12.6,4-12.6,12.6c0,8.6,6.2,12.4,12.6,12.4c6.4,0,10.8-2.6,13.2-5L489.6,534.6z"
         ></path>
@@ -253,7 +253,7 @@
           id="svg_5j"
           fill="none"
           stroke-width="5"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           d="M546.4,485.4L527.2,519v21.6h-18.1V519L490,485.4h20l8.2,18.6l8.2-18.6H546.4z"
         ></path>
         <!-- efficiency layer 2 ends-->
@@ -286,7 +286,13 @@ export default {
   },
   computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
   methods: {
-    ...mapActions(["getDocumentHeightPercentage", "getSectionsClientHeight"]),
+    ...mapActions([
+      "getDocumentHeightPercentage",
+      "getSectionsClientHeight",
+      "fillStroke",
+      "unfillStroke",
+      "setDashArrayAndOffset"
+    ]),
 
     //event on scroll
     handleScroll() {
@@ -300,7 +306,7 @@ export default {
       // window.console.log(this.sectionsEndingPerc.section2);
 
       if (this.docHeightPerc < start) {
-        this.unFill([
+        this.unfillStroke([
           this.svg4a,
           this.svg4b,
           this.svg4c,
@@ -320,7 +326,7 @@ export default {
         this.docHeightPerc < start + 1
       ) {
         this.drawPath(this.svg4a, start, start + 1);
-        this.unFill([
+        this.unfillStroke([
           this.svg4b,
           this.svg4c,
           this.svg5a,
@@ -340,8 +346,8 @@ export default {
       ) {
         this.drawPath(this.svg4b, start + 1, start + 2, -1);
         // document.querySelector(".txt2").style.opacity = "0";
-        this.fill([this.svg4a]);
-        this.unFill([
+        this.fillStroke([this.svg4a]);
+        this.unfillStroke([
           this.svg4c,
           this.svg5a,
           this.svg5b,
@@ -364,8 +370,8 @@ export default {
           this.docHeightPerc < start + 2.1
         ) {
           this.drawPath(this.svg5j, start + 2, start + 2.1);
-          this.fill([this.svg4a, this.svg4b]);
-          this.unFill([
+          this.fillStroke([this.svg4a, this.svg4b]);
+          this.unfillStroke([
             this.svg4c,
             this.svg5a,
             this.svg5b,
@@ -382,8 +388,8 @@ export default {
           this.docHeightPerc < start + 2.2
         ) {
           this.drawPath(this.svg5i, start + 2.1, start + 2.2);
-          this.fill([this.svg4a, this.svg4b, this.svg5j]);
-          this.unFill([
+          this.fillStroke([this.svg4a, this.svg4b, this.svg5j]);
+          this.unfillStroke([
             this.svg4c,
             this.svg5a,
             this.svg5b,
@@ -399,8 +405,8 @@ export default {
           this.docHeightPerc < start + 2.3
         ) {
           this.drawPath(this.svg5h, start + 2.2, start + 2.3);
-          this.fill([this.svg4a, this.svg4b, this.svg5j, this.svg5i]);
-          this.unFill([
+          this.fillStroke([this.svg4a, this.svg4b, this.svg5j, this.svg5i]);
+          this.unfillStroke([
             this.svg4c,
             this.svg5a,
             this.svg5b,
@@ -415,14 +421,14 @@ export default {
           this.docHeightPerc <= start + 2.4
         ) {
           this.drawPath(this.svg5g, start + 2.3, start + 2.4);
-          this.fill([
+          this.fillStroke([
             this.svg4a,
             this.svg4b,
             this.svg5j,
             this.svg5i,
             this.svg5h
           ]);
-          this.unFill([
+          this.unfillStroke([
             this.svg4c,
             this.svg5a,
             this.svg5b,
@@ -436,7 +442,7 @@ export default {
           this.docHeightPerc <= start + 2.5
         ) {
           this.drawPath(this.svg5f, start + 2.4, start + 2.5);
-          this.fill([
+          this.fillStroke([
             this.svg4a,
             this.svg4b,
             this.svg5j,
@@ -444,7 +450,7 @@ export default {
             this.svg5h,
             this.svg5g
           ]);
-          this.unFill([
+          this.unfillStroke([
             this.svg4c,
             this.svg5a,
             this.svg5b,
@@ -457,7 +463,7 @@ export default {
           this.docHeightPerc <= start + 2.6
         ) {
           this.drawPath(this.svg5e, start + 2.5, start + 2.6);
-          this.fill([
+          this.fillStroke([
             this.svg4a,
             this.svg4b,
             this.svg5j,
@@ -466,7 +472,7 @@ export default {
             this.svg5g,
             this.svg5f
           ]);
-          this.unFill([
+          this.unfillStroke([
             this.svg4c,
             this.svg5a,
             this.svg5b,
@@ -478,7 +484,7 @@ export default {
           this.docHeightPerc <= start + 2.7
         ) {
           this.drawPath(this.svg5d, start + 2.6, start + 2.7);
-          this.fill([
+          this.fillStroke([
             this.svg4a,
             this.svg4b,
             this.svg5j,
@@ -488,13 +494,13 @@ export default {
             this.svg5f,
             this.svg5e
           ]);
-          this.unFill([this.svg4c, this.svg5a, this.svg5b, this.svg5c]);
+          this.unfillStroke([this.svg4c, this.svg5a, this.svg5b, this.svg5c]);
         } else if (
           this.docHeightPerc >= start + 2.7 &&
           this.docHeightPerc <= start + 2.8
         ) {
           this.drawPath(this.svg5c, start + 2.7, start + 2.8);
-          this.fill([
+          this.fillStroke([
             this.svg4a,
             this.svg4b,
             this.svg5j,
@@ -505,13 +511,13 @@ export default {
             this.svg5e,
             this.svg5d
           ]);
-          this.unFill([this.svg4c, this.svg5a, this.svg5b]);
+          this.unfillStroke([this.svg4c, this.svg5a, this.svg5b]);
         } else if (
           this.docHeightPerc >= start + 2.8 &&
           this.docHeightPerc <= start + 2.9
         ) {
           this.drawPath(this.svg5b, start + 2.8, start + 2.9);
-          this.fill([
+          this.fillStroke([
             this.svg4a,
             this.svg4b,
             this.svg5j,
@@ -523,13 +529,13 @@ export default {
             this.svg5d,
             this.svg5c
           ]);
-          this.unFill([this.svg4c, this.svg5a]);
+          this.unfillStroke([this.svg4c, this.svg5a]);
         } else if (
           this.docHeightPerc >= start + 2.9 &&
           this.docHeightPerc < start + 3
         ) {
           this.drawPath(this.svg5a, start + 2.9, start + 3);
-          this.fill([
+          this.fillStroke([
             this.svg4a,
             this.svg4b,
             this.svg5j,
@@ -542,14 +548,14 @@ export default {
             this.svg5c,
             this.svg5b
           ]);
-          this.unFill([this.svg4c]);
+          this.unfillStroke([this.svg4c]);
         }
       } else if (
         this.docHeightPerc >= start + 3 &&
         this.docHeightPerc <= start + 3.5
       ) {
         this.drawPath(this.svg4c, start + 3, start + 3.5);
-        this.fill([
+        this.fillStroke([
           this.svg4a,
           this.svg4b,
           this.svg5j,
@@ -573,27 +579,6 @@ export default {
       var scrollPerc = (this.docHeightPerc - startPerc) / (endPerc - startPerc);
       drawLen = pathLen - pathLen * scrollPerc;
       el.setAttribute("stroke-dashoffset", sign * drawLen);
-    },
-
-    //unfill path
-    unFill(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dashoffset", el.getTotalLength());
-      });
-    },
-
-    //fill path
-    fill(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dashoffset", 0);
-      });
-    },
-
-    setDashArrayAndOffset(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dasharray", el.getTotalLength());
-        el.setAttribute("stroke-dashoffset", el.getTotalLength());
-      });
     }
   },
   mounted() {
@@ -647,7 +632,7 @@ export default {
   height: 127vh;
   width: 100%;
   bottom: 0;
-  background-color: #27353a;
+  background-color: #333333;
   // transform: translateY(9411px);
 
   // .txt2.visible {

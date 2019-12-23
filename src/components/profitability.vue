@@ -16,7 +16,7 @@
       viewBox="0 0 1440 900"
     >
       <!--BASE GFX-->
-      <g fill="#233034">
+      <g fill="#111">
         <path
           d="M703,509.7c-4,3.2-9.4,4.4-15.4,4.4h-5.9v17.2h-18.1v-55.2h24c6,0,11.4,1.2,15.4,4.4s6.2,8,6.2,14.6
 					C709.2,501.7,707,506.5,703,509.7z M689,490.7c-1.2-0.9-2.4-1-4.4-1h-3v10.8h3c2,0,3.2-0.2,4.4-1c1.3-0.9,2-2.2,2-4.4
@@ -57,13 +57,13 @@
 
       <path
         fill="none"
-        stroke="#233034"
+        stroke="#111"
         stroke-width="10"
         d="M809,0 809,231 488,231 488,510 642,510"
       ></path>
       <line
         fill="none"
-        stroke="#233034"
+        stroke="#111"
         stroke-width="10"
         x1="1281"
         y1="511"
@@ -79,14 +79,14 @@
         <path
           id="svg_8a"
           fill="none"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           stroke-width="10"
           d="M809,0 809,231 488,231 488,510 642,510"
         ></path>
         <line
           id="svg_8b"
           fill="none"
-          stroke="#3aafa9"
+          stroke="#ffdf86"
           stroke-width="10"
           x1="1281"
           y1="511"
@@ -102,7 +102,7 @@
           stroke-miterlimit="10"
           points="809,0 809,231 488,231 488,510 642,510"
         ></polyline> -->
-        <g fill="none" stroke-width="5" stroke="#3aafa9">
+        <g fill="none" stroke-width="5" stroke="#ffdf86">
           <path
             id="svg_9a"
             d="M703,509.7c-4,3.2-9.4,4.4-15.4,4.4h-5.9v17.2h-18.1v-55.2h24c6,0,11.4,1.2,15.4,4.4s6.2,8,6.2,14.6
@@ -156,14 +156,14 @@
         </g>
         <!-- <path
             fill="none"
-            stroke="#3aafa9"
+            stroke="#ffdf86"
             stroke-width="10"
             stroke-miterlimit="10"
             d="M809,-2 809,231 488,231 488,510 642,510"
           ></path>
           <line
             fill="none"
-            stroke="#3aafa9"
+            stroke="#ffdf86"
             stroke-width="10"
             stroke-miterlimit="10"
             x1="1281"
@@ -202,7 +202,13 @@ export default {
   },
   computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
   methods: {
-    ...mapActions(["getDocumentHeightPercentage", "getSectionsClientHeight"]),
+    ...mapActions([
+      "getDocumentHeightPercentage",
+      "getSectionsClientHeight",
+      "fillStroke",
+      "unfillStroke",
+      "setDashArrayAndOffset"
+    ]),
 
     //event on scroll
     handleScroll() {
@@ -211,7 +217,7 @@ export default {
       // window.console.log(start);
 
       if (this.docHeightPerc < start) {
-        this.unFill([
+        this.unfillStroke([
           this.svg8a,
           this.svg8b,
           this.svg9a,
@@ -233,7 +239,7 @@ export default {
         this.docHeightPerc < start + 1
       ) {
         this.drawPath(this.svg8a, start, start + 1);
-        this.unFill([
+        this.unfillStroke([
           this.svg8b,
           this.svg9a,
           this.svg9b,
@@ -259,8 +265,8 @@ export default {
           this.docHeightPerc < start + 1.1
         ) {
           this.drawPath(this.svg9a, start + 1, start + 1.1);
-          this.fill([this.svg8a]);
-          this.unFill([
+          this.fillStroke([this.svg8a]);
+          this.unfillStroke([
             this.svg8b,
             this.svg9b,
             this.svg9c,
@@ -281,8 +287,8 @@ export default {
         ) {
           this.drawPath(this.svg9b, start + 1.1, start + 1.2);
           // document.querySelector(".txt4").style.opacity = "0";
-          this.fill([this.svg8a, this.svg9a]);
-          this.unFill([
+          this.fillStroke([this.svg8a, this.svg9a]);
+          this.unfillStroke([
             this.svg8b,
             this.svg9c,
             this.svg9d,
@@ -302,8 +308,8 @@ export default {
         ) {
           this.drawPath(this.svg9c, start + 1.2, start + 1.3);
           document.querySelector(".txt4").style.opacity = "1";
-          this.fill([this.svg8a, this.svg9a, this.svg9b]);
-          this.unFill([
+          this.fillStroke([this.svg8a, this.svg9a, this.svg9b]);
+          this.unfillStroke([
             this.svg8b,
             this.svg9d,
             this.svg9e,
@@ -321,8 +327,8 @@ export default {
           this.docHeightPerc <= start + 1.4
         ) {
           this.drawPath(this.svg9d, start + 1.3, start + 1.4);
-          this.fill([this.svg8a, this.svg9a, this.svg9b, this.svg9c]);
-          this.unFill([
+          this.fillStroke([this.svg8a, this.svg9a, this.svg9b, this.svg9c]);
+          this.unfillStroke([
             this.svg8b,
             this.svg9e,
             this.svg9f,
@@ -339,14 +345,14 @@ export default {
           this.docHeightPerc <= start + 1.5
         ) {
           this.drawPath(this.svg9e, start + 1.4, start + 1.5);
-          this.fill([
+          this.fillStroke([
             this.svg8a,
             this.svg9a,
             this.svg9b,
             this.svg9c,
             this.svg9d
           ]);
-          this.unFill([
+          this.unfillStroke([
             this.svg8b,
             this.svg9f,
             this.svg9g,
@@ -362,7 +368,7 @@ export default {
           this.docHeightPerc <= start + 1.6
         ) {
           this.drawPath(this.svg9f, start + 1.5, start + 1.6);
-          this.fill([
+          this.fillStroke([
             this.svg8a,
             this.svg9a,
             this.svg9b,
@@ -370,7 +376,7 @@ export default {
             this.svg9d,
             this.svg9e
           ]);
-          this.unFill([
+          this.unfillStroke([
             this.svg8b,
             this.svg9g,
             this.svg9h,
@@ -385,7 +391,7 @@ export default {
           this.docHeightPerc <= start + 1.7
         ) {
           this.drawPath(this.svg9g, start + 1.6, start + 1.7);
-          this.fill([
+          this.fillStroke([
             this.svg8a,
             this.svg9a,
             this.svg9b,
@@ -394,7 +400,7 @@ export default {
             this.svg9e,
             this.svg9f
           ]);
-          this.unFill([
+          this.unfillStroke([
             this.svg8b,
             this.svg9h,
             this.svg9i,
@@ -408,7 +414,7 @@ export default {
           this.docHeightPerc <= start + 1.8
         ) {
           this.drawPath(this.svg9h, start + 1.7, start + 1.8);
-          this.fill([
+          this.fillStroke([
             this.svg8a,
             this.svg9a,
             this.svg9b,
@@ -418,7 +424,7 @@ export default {
             this.svg9f,
             this.svg9g
           ]);
-          this.unFill([
+          this.unfillStroke([
             this.svg8b,
             this.svg9i,
             this.svg9j,
@@ -431,7 +437,7 @@ export default {
           this.docHeightPerc <= start + 1.9
         ) {
           this.drawPath(this.svg9i, start + 1.8, start + 1.9);
-          this.fill([
+          this.fillStroke([
             this.svg8a,
             this.svg9a,
             this.svg9b,
@@ -442,7 +448,7 @@ export default {
             this.svg9g,
             this.svg9h
           ]);
-          this.unFill([
+          this.unfillStroke([
             this.svg8b,
             this.svg9j,
             this.svg9k,
@@ -454,7 +460,7 @@ export default {
           this.docHeightPerc <= start + 2
         ) {
           this.drawPath(this.svg9j, start + 1.9, start + 2);
-          this.fill([
+          this.fillStroke([
             this.svg8a,
             this.svg9a,
             this.svg9b,
@@ -466,13 +472,13 @@ export default {
             this.svg9h,
             this.svg9i
           ]);
-          this.unFill([this.svg8b, this.svg9k, this.svg9l, this.svg9m]);
+          this.unfillStroke([this.svg8b, this.svg9k, this.svg9l, this.svg9m]);
         } else if (
           this.docHeightPerc >= start + 2 &&
           this.docHeightPerc <= start + 2.1
         ) {
           this.drawPath(this.svg9k, start + 2, start + 2.1);
-          this.fill([
+          this.fillStroke([
             this.svg8a,
             this.svg9a,
             this.svg9b,
@@ -485,13 +491,13 @@ export default {
             this.svg9i,
             this.svg9j
           ]);
-          this.unFill([this.svg8b, this.svg9l, this.svg9m]);
+          this.unfillStroke([this.svg8b, this.svg9l, this.svg9m]);
         } else if (
           this.docHeightPerc >= start + 2.1 &&
           this.docHeightPerc <= start + 2.2
         ) {
           this.drawPath(this.svg9l, start + 2.1, start + 2.2);
-          this.fill([
+          this.fillStroke([
             this.svg8a,
             this.svg9a,
             this.svg9b,
@@ -505,13 +511,13 @@ export default {
             this.svg9j,
             this.svg9k
           ]);
-          this.unFill([this.svg8b, this.svg9m]);
+          this.unfillStroke([this.svg8b, this.svg9m]);
         } else if (
           this.docHeightPerc >= start + 2.2 &&
           this.docHeightPerc <= start + 2.3
         ) {
           this.drawPath(this.svg9m, start + 2.2, start + 2.3);
-          this.fill([
+          this.fillStroke([
             this.svg8a,
             this.svg9a,
             this.svg9b,
@@ -526,14 +532,14 @@ export default {
             this.svg9k,
             this.svg9l
           ]);
-          this.unFill([this.svg8b]);
+          this.unfillStroke([this.svg8b]);
         }
       } else if (
         this.docHeightPerc >= start + 2.3 &&
         this.docHeightPerc < start + 3
       ) {
         this.drawPath(this.svg8b, start + 2.3, start + 3);
-        this.fill([
+        this.fillStroke([
           this.svg8a,
           this.svg9a,
           this.svg9b,
@@ -550,7 +556,7 @@ export default {
           this.svg9m
         ]);
       } else if (this.docHeightPerc >= start + 2.8) {
-        this.fill([
+        this.fillStroke([
           this.svg8a,
           this.svg8b,
           this.svg9a,
@@ -577,28 +583,9 @@ export default {
       var scrollPerc = (this.docHeightPerc - startPerc) / (endPerc - startPerc);
       drawLen = pathLen - pathLen * scrollPerc;
       el.setAttribute("stroke-dashoffset", sign * drawLen);
-    },
-
-    //unfill path
-    unFill(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dashoffset", el.getTotalLength());
-      });
-    },
-
-    //fill path
-    fill(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dashoffset", 0);
-      });
-    },
-    setDashArrayAndOffset(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dasharray", el.getTotalLength());
-        el.setAttribute("stroke-dashoffset", el.getTotalLength());
-      });
     }
   },
+
   mounted() {
     this.getDocumentHeightPercentage();
     window.addEventListener("scroll", this.handleScroll);
@@ -654,7 +641,7 @@ export default {
   height: 138vh;
   width: 100%;
   bottom: 0;
-  background-color: #27353a;
+  background-color: #333333;
 
   .txt4.visible {
     // opacity: 1;

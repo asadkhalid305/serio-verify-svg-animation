@@ -15,7 +15,7 @@
       <path
         fill="none"
         stroke-width="10"
-        stroke="#019b94"
+        stroke="#333333"
         d="M822,376h38v372H664.5v152"
       ></path>
       <path
@@ -49,19 +49,26 @@ export default {
     };
   },
   computed: mapGetters(["docHeightPerc", "sectionsEndingPerc"]),
+
   methods: {
-    ...mapActions(["getDocumentHeightPercentage", "getSectionsClientHeight"]),
+    ...mapActions([
+      "getDocumentHeightPercentage",
+      "getSectionsClientHeight",
+      "fillStroke",
+      "unfillStroke",
+      "setDashArrayAndOffset"
+    ]),
     //event on scroll
     handleScroll() {
       this.getDocumentHeightPercentage();
       // window.console.log(this.sectionsEndingPerc.section1);
       let start = this.sectionsEndingPerc.section1;
       if (this.docHeightPerc < 0) {
-        this.unFill([this.s1svg1]);
+        this.unfillStroke([this.s1svg1]);
       } else if (this.docHeightPerc >= 0 && this.docHeightPerc <= start) {
         this.drawPath(this.s1svg1, 0, start - 0.1);
       } else if (this.docHeightPerc > start) {
-        this.fill([this.s1svg1]);
+        this.fillStroke([this.s1svg1]);
       }
     },
 
@@ -72,27 +79,6 @@ export default {
       var scrollPerc = (this.docHeightPerc - startPerc) / (endPerc - startPerc);
       drawLen = pathLen - pathLen * scrollPerc;
       el.setAttribute("stroke-dashoffset", sign * drawLen);
-    },
-
-    //unfill path
-    unFill(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dashoffset", el.getTotalLength());
-      });
-    },
-
-    //fill path
-    fill(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dashoffset", 0);
-      });
-    },
-
-    setDashArrayAndOffset(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dasharray", el.getTotalLength());
-        el.setAttribute("stroke-dashoffset", el.getTotalLength());
-      });
     }
   },
   mounted() {
@@ -126,7 +112,7 @@ export default {
   width: 100%;
   transform: translate(0, 100vh);
   transition: all 1.5s ease;
-  background-color: rgb(76, 175, 169);
+  background-color: #e5bd4e;
 
   .arrow {
     transform-origin: center;
@@ -159,7 +145,7 @@ export default {
       font-weight: 1000;
 
       .color-blue {
-        color: #18252a;
+        color: #333333;
       }
     }
 
@@ -170,6 +156,7 @@ export default {
       transform: translateY(0);
       letter-spacing: 1px;
       font-family: grad, serif;
+      color: #333333;
     }
   }
 }

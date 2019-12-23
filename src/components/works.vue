@@ -42,7 +42,7 @@
             <path
               id="s2-path1"
               fill="none"
-              stroke="#27363b"
+              stroke="#e5bd4e"
               stroke-width="10"
               stroke-linecap="square"
               stroke-linejoin="bevel"
@@ -51,7 +51,7 @@
             <path
               id="s2-path2"
               fill="none"
-              stroke="#3aafa9"
+              stroke="#333333"
               stroke-linecap="square"
               stroke-width="10"
               d="M664.5,0 664.5,448	778.2,555 3635.5,555"
@@ -117,7 +117,7 @@
               class="icon"
               fill="none"
               style="stroke-width: 6;"
-              stroke="#111"
+              stroke="#e5bd4e"
               d="M1222.5,346h-27v-72h90v72h-21 M1253.5,304h22 M1258.5,346h-30 M1253.5,316h22 M1253.5,328h22 M1253.5,292h12 M1226.3,311c6.7,0,12.2-5.5,12.2-12.2c0-6.7-5.5-12.2-12.2-12.2s-12.2,5.5-12.2,12.2C1214.1,305.5,1219.6,311,1226.3,311z M1220.6,317l-9,3l-3.1,18 M1244.6,338l-3.1-18l-9-3"
             ></path>
           </svg>
@@ -132,35 +132,35 @@
               class="icon"
               fill="none"
               style="stroke-width: 6;"
-              stroke="#111"
+              stroke="#e5bd4e"
               d="M2142,274l0,21h15.2l-24.1,36l0,0l-24.1-36h15.2l0-21 M2094.5,324v21h78v-21"
             ></path>
             <path
               class="icon"
               fill="none"
               style="stroke-width: 6;"
-              stroke="#111"
+              stroke="#e5bd4e"
               d="M2111,481"
             ></path>
             <path
               class="icon"
               fill="none"
               style="stroke-width: 6;"
-              stroke="#111"
+              stroke="#e5bd4e"
               d="M2111,497"
             ></path>
             <path
               class="icon"
               fill="none"
               style="stroke-width: 6;"
-              stroke="#111"
+              stroke="#e5bd4e"
               d="M2105.5,481"
             ></path>
             <path
               class="icon"
               fill="none"
               style="stroke-width: 6;"
-              stroke="#111"
+              stroke="#e5bd4e"
               d="M2090.5,481"
             ></path>
           </svg>
@@ -174,7 +174,7 @@
               class="icon"
               fill="none"
               style="stroke-width: 6;"
-              stroke="#111"
+              stroke="#e5bd4e"
               d="M2979.3,345.7l2.9-18l9.1-2.9 M3015.2,345.7l-2.9-18l-9.1-2.9 M2997.2,294.7c-6.6,0-12,5.4-12,12c0,6.6,5.4,12,12,12s12-5.4,12-12C3009.3,300.1,3003.9,294.7,2997.2,294.7z M3077.2,324.8l-9.1,2.9l-2.9,18 M3101.2,345.7l-2.9-18l-9.1-2.9 M3083.2,294.7c-6.6,0-12,5.4-12,12c0,6.6,5.4,12,12,12c6.6,0,12-5.4,12-12C3095.2,300.1,3089.9,294.7,3083.2,294.7z M3025.2,318.7h27 M3040.2,330.7l12-12l-12-12"
             ></path>
           </svg>
@@ -188,7 +188,7 @@
               class="icon"
               fill="none"
               style="stroke-width: 6;"
-              stroke="#111"
+              stroke="#e5bd4e"
               d="M3726.9,298.7c0-16.5,13.4-29.9,29.9-29.9s29.9,13.4,29.9,29.9 M3726.9,307.7c-8.3,0-15,6.7-15,15s6.7,15,15,15V307.7z M3786.9,337.8c8.3,0,15-6.7,15-15s-6.7-15-15-15V337.8z M3759.7,340.5c-3.4,0-6.1,2.7-6.1,6.1c0,3.4,2.7,6.1,6.1,6.1s6.1-2.7,6.1-6.1C3765.8,343.2,3763,340.5,3759.7,340.5z M3765.8,346.7h15c3.4,0,6.1-2.7,6.1-6.1v-2.8"
             ></path>
           </svg>
@@ -207,7 +207,7 @@
             <path
               class="icon"
               fill="none"
-              stroke="#3aafa9"
+              stroke="#333333"
               style="stroke-width: 6;"
               d="M1222.5,555h-27v-72h90v72h-21 M1253.5,513h22 M1258.5,555h-30 M1253.5,525h22 M1253.5,537h22 M1253.5,501h12 M1226.3,520c6.7,0,12.2-5.5,12.2-12.2c0-6.7-5.5-12.2-12.2-12.2s-12.2,5.5-12.2,12.2C1214.1,514.5,1219.6,520,1226.3,520z M1220.6,526l-9,3l-3.1,18 M1244.6,547l-3.1-18l-9-3"
             ></path>
@@ -222,7 +222,7 @@
             <path
               class="icon"
               fill="none"
-              stroke="#3aafa9"
+              stroke="#333333"
               style="stroke-width: 6;"
               d="M1679.5,520.5L1658,487h72.5l-21.5,33.3 M1680.9,499.2l9.8,15.2 M1709.5,529h-30v13h30V529z M1691.3,555.9c0,1.7,1.3,3,3,3s3-1.3,3-3s-1.3-3-3-3S1691.3,554.2,1691.3,555.9z M1697.1,478.8c0-1.6-1.3-2.9-2.9-2.9c-1.6,0-2.9,1.3-2.9,2.9 M1709.3,478.6c0-8.3-6.7-15.1-15.1-15.1s-15.1,6.7-15.1,15.1"
             ></path>
@@ -237,7 +237,7 @@
             <path
               class="icon"
               fill="none"
-              stroke="#3aafa9"
+              stroke="#333333"
               style="stroke-width: 6;"
               d="M2090.5,481.1l15.1-1.3l1.3,15 M2170.7,525.3l1.2,15l15.1-1.2 M2105.6,479.8c-7.2,8-11.7,18.6-11.7,30.2c0,24.8,20.1,44.9,44.9,44.9c8.7,0,16.9-2.5,23.8-6.8 M2171.9,540.3c7.3-8,11.8-18.7,11.8-30.4c0-24.8-20.1-44.9-44.9-44.9c-8.8,0-17.1,2.5-24,6.9"
             ></path>
@@ -251,7 +251,7 @@
             <path
               class="icon"
               fill="none"
-              stroke="#3aafa9"
+              stroke="#333333"
               style="stroke-width: 6;"
               d="M2554.6,505.3c0-16.5,13.4-29.9,29.9-29.9s29.9,13.4,29.9,29.9 M2554.6,514.4c-8.3,0-15,6.7-15,15c0,8.3,6.7,15,15,15V514.4z M2614.5,544.4c8.3,0,15-6.7,15-15c0-8.3-6.7-15-15-15V544.4z M2587.3,547.1c-3.4,0-6.1,2.7-6.1,6.1 s2.7,6.1,6.1,6.1s6.1-2.7,6.1-6.1S2590.7,547.1,2587.3,547.1z M2593.4,553.3h15c3.4,0,6.1-2.7,6.1-6.1v-2.8"
             ></path>
@@ -272,13 +272,13 @@
               >
                 <path
                   fill="none"
-                  stroke="#18252a"
+                  stroke="#e5bd4e"
                   stroke-width="8"
                   d="M32.2,53 42.4,67 60.8,19.6 "
                 ></path>
                 <path
                   fill="none"
-                  stroke="#18252a"
+                  stroke="#e5bd4e"
                   stroke-width="6"
                   d="M92.7,47.8c0,24.8-20.1,44.8-44.8,44.8 S3,72.6,3,47.8S23.1,3,47.8,3S92.7,23.1,92.7,47.8z"
                 ></path>
@@ -302,13 +302,13 @@
               >
                 <path
                   fill="none"
-                  stroke="#3aafa9"
+                  stroke="#333333"
                   stroke-width="8"
                   d="M32.2,53 42.4,67 60.8,19.6 "
                 ></path>
                 <path
                   fill="none"
-                  stroke="#3aafa9"
+                  stroke="#333333"
                   stroke-width="6"
                   d="M92.7,47.8c0,24.8-20.1,44.8-44.8,44.8 S3,72.6,3,47.8S23.1,3,47.8,3S92.7,23.1,92.7,47.8z"
                 ></path>
@@ -334,14 +334,14 @@
                   <rect
                     id="product-arrow-mask"
                     y="-41"
-                    fill="#001177"
+                    fill="#e5bd4e"
                     width="26"
                     height="41"
                   ></rect>
                 </clipPath>
               </defs>
               <path
-                fill="#3aafa9"
+                fill="#e5bd4e"
                 d="M7.4,11.2v2.2h11.1v-2.2H7.4z M7.4,6.1v3.2h11.1V6.1H7.4z M7.4,0v4.1h11.1V0L7.4,0L7.4,0z M13,41l13-14.3 h-7.4V15.4H7.4v11.3H0L13,41z"
               ></path>
             </svg>
@@ -378,7 +378,13 @@ export default {
     "sectionsClientHeight"
   ]),
   methods: {
-    ...mapActions(["getDocumentHeightPercentage", "getSectionsClientHeight"]),
+    ...mapActions([
+      "getDocumentHeightPercentage",
+      "getSectionsClientHeight",
+      "fillStroke",
+      "unfillStroke",
+      "setDashArrayAndOffset"
+    ]),
 
     //event on scroll
     handleScroll() {
@@ -404,7 +410,7 @@ export default {
 
       //svg process starts
       if (this.docHeightPerc < start) {
-        this.unFill([this.s2path1, this.s2path2]);
+        this.unfillStroke([this.s2path1, this.s2path2]);
       } else if (
         this.docHeightPerc >= start &&
         this.docHeightPerc <= start + 16
@@ -430,12 +436,20 @@ export default {
           document.querySelectorAll(".label").forEach(el => {
             el.style.opacity = "0";
           });
+
+          document
+            .querySelector(".counter--a")
+            .classList.remove("counter-a-bar");
+          document
+            .querySelector(".counter--b")
+            .classList.remove("counter-b-bar");
         }
 
         if (Math.floor(this.svgStatus(this.s2path1)) >= 28) {
-          document.querySelectorAll(".label").forEach(el => {
-            el.style.opacity = "1";
-          });
+          document.querySelector(".label").style.opacity = "1";
+
+          document.querySelector(".counter--a").classList.add("counter-a-bar");
+          document.querySelector(".counter--b").classList.add("counter-b-bar");
         }
 
         if (Math.floor(this.svgStatus(this.s2path1)) < 31) {
@@ -584,13 +598,6 @@ export default {
           document.querySelector("#product-arrow").style.opacity = "1";
         }
       }
-      // if (this.docHeightPerc > start + 16) {
-      //   let els = document.querySelectorAll(".anim");
-      //   els.forEach(el => {
-      //     el.style.transform = `translateX(${window.scrollY * -1}px)`;
-      //   });
-      // }
-      //svg process ends
     },
 
     //draw line
@@ -600,27 +607,6 @@ export default {
       var scrollPerc = (this.docHeightPerc - startPerc) / (endPerc - startPerc);
       drawLen = pathLen - pathLen * scrollPerc;
       el.setAttribute("stroke-dashoffset", sign * drawLen);
-    },
-
-    //unfill path
-    unFill(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dashoffset", el.getTotalLength());
-      });
-    },
-
-    //fill path
-    fill(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dashoffset", 0);
-      });
-    },
-
-    setDashArrayAndOffset(els) {
-      els.forEach(el => {
-        el.setAttribute("stroke-dasharray", el.getTotalLength());
-        el.setAttribute("stroke-dashoffset", el.getTotalLength());
-      });
     },
 
     svgStatus(el) {
@@ -706,11 +692,11 @@ export default {
   }
   .txt.old {
     max-width: 320px;
-    color: #27363b;
+    color: #e5bd4e;
     top: 49%;
   }
   .txt.new {
-    color: #3aafa9;
+    color: #333333;
     top: 78%;
   }
 
@@ -742,35 +728,53 @@ export default {
       position: absolute;
       padding-left: 25px;
       white-space: nowrap;
+    }
 
+    .counter-a-bar,
+    .counter-b-bar {
       &:before {
         content: "";
         position: absolute;
         width: 0.6vw;
         height: 10vw;
-        background-color: #18252a;
-        top: -3.8vw;
-        left: 0;
-        // transition: transform 0.3s ease;
-        // transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-        transform: scaleY(0);
-        // transform-origin: center;
+        background-color: #e5bd4e;
+        top: -3.6vw;
+        left: -12px;
+        animation: SHW 0.5s ease;
+        animation-fill-mode: both;
       }
+    }
 
-      .label {
-        position: absolute;
-        top: -18px;
-        font-size: 14px;
-        opacity: 0;
-        // transform: translateY(5px);
-        transition: all 0.5s ease;
+    .counter-b-bar {
+      &:before {
+        background-color: #333333;
       }
+    }
 
-      #check_a,
-      #check_b {
+    @keyframes SHW {
+      from {
+        transform: scale(0);
         opacity: 0;
-        transition: opacity 0.5s ease;
       }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .label {
+      position: absolute;
+      top: -18px;
+      font-size: 14px;
+      opacity: 0;
+      // transform: translateY(5px);
+      transition: all 0.5s ease;
+    }
+
+    #check_a,
+    #check_b {
+      opacity: 0;
+      transition: opacity 0.5s ease;
     }
 
     .h3,
@@ -819,17 +823,18 @@ export default {
       position: absolute;
       width: 76px;
       height: 76px;
-      left: -100px;
+      left: -115px;
       top: -23px;
     }
 
     .counter--a {
       top: 45.5%;
+      color: #e5bd4e;
     }
 
     .counter--b {
       top: 75%;
-      color: #3aafa9;
+      color: #333333;
     }
 
     .arrow {
@@ -862,7 +867,7 @@ export default {
       font-size: 20px;
       line-height: 34px;
       position: absolute;
-      color: #18252a;
+      color: #333333;
 
       h1 {
         font-size: 5vw;

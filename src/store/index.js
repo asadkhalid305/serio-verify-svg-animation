@@ -9,11 +9,13 @@ export default new Vuex.Store({
     sectionsEndingPerc: 0,
     sectionsClientHeight: {}
   },
+
   getters: {
     docHeightPerc: state => state.docHeightPerc,
     sectionsEndingPerc: state => state.sectionsEndingPerc,
     sectionsClientHeight: state => state.sectionsClientHeight
   },
+
   actions: {
     getDocumentHeightPercentage({
       commit
@@ -73,18 +75,42 @@ export default new Vuex.Store({
       commit('setSectionsClientHeight', payload)
     },
 
-    // getScrollDirection({
-    //   commit
-    // }) {
-    //   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-    //   if (st > lastScrollTop) {
-    //     // downscroll code
-    //   } else {
-    //     // upscroll code
-    //   }
-    //   lastScrollTop = st <= 0 ? 0 : st;
-    // }
+
+    //fill path
+    fillStroke({
+      commit
+    }, els) {
+      window.console.log((els))
+      els.forEach(el => {
+        el.setAttribute("stroke-dashoffset", 0);
+      });
+
+      commit("checkActionStatus", els)
+    },
+
+    //unfill path
+    unfillStroke({
+      commit
+    }, els) {
+      els.forEach(el => {
+        el.setAttribute("stroke-dashoffset", el.getTotalLength());
+      });
+
+      commit("checkActionStatus", els)
+    },
+
+    setDashArrayAndOffset({
+      commit
+    }, els) {
+      els.forEach(el => {
+        el.setAttribute("stroke-dasharray", el.getTotalLength());
+        el.setAttribute("stroke-dashoffset", el.getTotalLength());
+      });
+
+      commit("checkActionStatus", els)
+    }
   },
+
   mutations: {
     setDocHeight: (state, newDocHeightPerc) => {
       state.docHeightPerc = newDocHeightPerc
@@ -100,6 +126,9 @@ export default new Vuex.Store({
       temp[payload.sectionId] = payload.sectionClientHeight
 
       state.sectionsClientHeight = temp
+    },
+    checkActionStatus: (data) => {
+      window.console.log((data))
     }
   },
 })
