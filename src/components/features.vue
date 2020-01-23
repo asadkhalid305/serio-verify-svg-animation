@@ -1,6 +1,6 @@
 <template>
   <section id="section6">
-    <div id="features-container" class="fixed-container">
+    <div id="features-container" class="features-fixed-container">
       <div class="svg-container">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900">
           <defs>
@@ -206,7 +206,6 @@ export default {
       // svg10c: 0,
       // svg10d: 0,
       // svg10e: 0,
-      initial: 0,
       screenNo: 1
     };
   },
@@ -231,16 +230,19 @@ export default {
 
       // handling section2 scroll starts
       if (this.docHeightPerc < start) {
-        document.querySelector(".fixed-container").style.position = "relative";
+        document.querySelector(".features-fixed-container").style.position =
+          "relative";
       } else if (this.docHeightPerc >= start) {
-        document.querySelector(".fixed-container").style.position = "fixed";
+        document.querySelector(".features-fixed-container").style.position =
+          "fixed";
         document.querySelector(
-          ".fixed-container"
+          ".features-fixed-container"
         ).style.transform = `translateY(0px)`;
       }
 
       let allSectionsHeightInPx =
-        this.sectionsClientHeight.section6 +
+        this.sectionsClientHeight.section6 -
+        document.querySelector(".features-fixed-container").clientHeight +
         this.sectionsClientHeight.section5 +
         this.sectionsClientHeight.section4 +
         this.sectionsClientHeight.section3 +
@@ -249,7 +251,7 @@ export default {
 
       if (window.scrollY >= allSectionsHeightInPx) {
         document.querySelector(
-          ".fixed-container"
+          ".features-fixed-container"
         ).style.transform = `translateY(${(window.scrollY -
           allSectionsHeightInPx) *
           -1}px)`;
@@ -370,12 +372,12 @@ export default {
   padding: 0;
   z-index: 2;
   position: relative;
-  height: 1100vh;
+  height: 1220vh;
   width: 100%;
   bottom: 0;
   background-color: #ffdf86;
 
-  .fixed-container {
+  .features-fixed-container {
     top: 0;
     z-index: 10000;
     height: 100vh;

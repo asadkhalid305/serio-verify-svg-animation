@@ -80,7 +80,6 @@ export default new Vuex.Store({
     fillStroke({
       commit
     }, els) {
-      window.console.log((els))
       els.forEach(el => {
         el.setAttribute("stroke-dashoffset", 0);
       });

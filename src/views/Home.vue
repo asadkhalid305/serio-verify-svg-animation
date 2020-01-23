@@ -7,6 +7,9 @@
       <Quality />
       <Profitability />
       <Features />
+      <Track />
+      <Signup />
+      <Contact />
     </div>
   </div>
 </template>
@@ -18,6 +21,9 @@ import Outcome from "../components/outcome";
 import Quality from "../components/quality";
 import Profitability from "../components/profitability";
 import Features from "../components/features";
+import Track from "../components/track";
+import Signup from "../components/signup";
+import Contact from "../components/contact";
 
 import { mapActions } from "vuex";
 
@@ -34,7 +40,10 @@ export default {
     Outcome,
     Quality,
     Profitability,
-    Features
+    Features,
+    Track,
+    Signup,
+    Contact
   },
   methods: {
     ...mapActions(["getSectionsPercetages"])
