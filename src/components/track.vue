@@ -170,7 +170,7 @@ export default {
 
       let allSectionsHeightInPx =
         this.sectionsClientHeight.section7 -
-        document.querySelector(".track-fixed-container").clientHeight +
+        (document.querySelector(".track-fixed-container").clientHeight + 500) +
         this.sectionsClientHeight.section6 +
         this.sectionsClientHeight.section5 +
         this.sectionsClientHeight.section4 +

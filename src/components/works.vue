@@ -561,11 +561,11 @@ export default {
           document.querySelector("#check_b").style.opacity = "1";
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) < 100) {
+        if (Math.floor(this.svgStatus(this.s2path1)) < 110) {
           document.querySelector("#check_a").style.opacity = "0";
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) >= 100) {
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 110) {
           document.querySelector("#check_a").style.opacity = "1";
         }
 
@@ -580,23 +580,22 @@ export default {
         // change 16 to 14 to remove the bug on refresh
         if (
           this.docHeightPerc >= start + 3.4 &&
-          this.docHeightPerc <= start + 14
+          this.docHeightPerc <= start + 16
         ) {
           // window.console.log(window.scrollY - 2380);
 
           let els = document.querySelectorAll(".anim");
           els.forEach(el => {
-            el.style.transform = `translateX(${(window.scrollY - 2380) *
+            el.style.transform = `translateX(${(window.scrollY - 2220) *
               -1}px)`;
           });
         }
-        if (this.docHeightPerc <= start + 13.5) {
+        if (this.docHeightPerc <= start + 16) {
           document.querySelector("#product-arrow").style.opacity = "0";
         }
-
-        if (this.docHeightPerc > start + 13.5) {
-          document.querySelector("#product-arrow").style.opacity = "1";
-        }
+      }
+      if (this.docHeightPerc > start + 16) {
+        document.querySelector("#product-arrow").style.opacity = "1";
       }
     },
 

@@ -60,7 +60,7 @@ export default {
 <style scoped>
 #container {
   position: relative;
-  height: 4475.5vh;
+  height: 3966vh;
   width: 100%;
   overflow: hidden;
   background-color: #111;
