@@ -9,6 +9,7 @@
       <Features />
       <Track />
       <Signup />
+      <Process />
       <Contact />
     </div>
   </div>
@@ -24,6 +25,7 @@ import Features from "../components/features";
 import Track from "../components/track";
 import Signup from "../components/signup";
 import Contact from "../components/contact";
+import Process from "../components/process";
 
 import { mapActions } from "vuex";
 
@@ -43,7 +45,8 @@ export default {
     Features,
     Track,
     Signup,
-    Contact
+    Contact,
+    Process
   },
   methods: {
     ...mapActions(["getSectionsPercetages"])
