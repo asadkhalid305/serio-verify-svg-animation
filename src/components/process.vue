@@ -366,7 +366,7 @@ export default {
   padding: 0;
   z-index: 2;
   position: relative;
-  height: 638vh;
+  height: 533vh;
   width: 100%;
   bottom: 0;
   background-color: #111;

@@ -83,8 +83,6 @@ export default new Vuex.Store({
       els.forEach(el => {
         el.setAttribute("stroke-dashoffset", 0);
       });
-
-      commit("checkActionStatus", els)
     },
 
     //unfill path
@@ -94,8 +92,6 @@ export default new Vuex.Store({
       els.forEach(el => {
         el.setAttribute("stroke-dashoffset", el.getTotalLength());
       });
-
-      commit("checkActionStatus", els)
     },
 
     setDashArrayAndOffset({
@@ -105,8 +101,6 @@ export default new Vuex.Store({
         el.setAttribute("stroke-dasharray", el.getTotalLength());
         el.setAttribute("stroke-dashoffset", el.getTotalLength());
       });
-
-      commit("checkActionStatus", els)
     }
   },
 
@@ -125,9 +119,6 @@ export default new Vuex.Store({
       temp[payload.sectionId] = payload.sectionClientHeight
 
       state.sectionsClientHeight = temp
-    },
-    checkActionStatus: (data) => {
-      window.console.log((data))
     }
   },
 })

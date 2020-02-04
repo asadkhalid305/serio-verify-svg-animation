@@ -364,7 +364,6 @@ export default {
         this.docHeightPerc >= start + 2 &&
         this.docHeightPerc < start + 3
       ) {
-        document.querySelector(".txt2").style.opacity = "1";
         if (
           this.docHeightPerc >= start + 2 &&
           this.docHeightPerc < start + 2.1
@@ -387,6 +386,7 @@ export default {
           this.docHeightPerc >= start + 2.1 &&
           this.docHeightPerc < start + 2.2
         ) {
+          // document.querySelector(".txt2").style.opacity = "1";
           this.drawPath(this.svg5i, start + 2.1, start + 2.2);
           this.fillStroke([this.svg4a, this.svg4b, this.svg5j]);
           this.unfillStroke([
@@ -569,6 +569,9 @@ export default {
           this.svg5b,
           this.svg5a
         ]);
+      }
+      if (this.docHeightPerc >= start + 2.3) {
+        document.querySelector(".txt2").style.opacity = "1";
       }
     },
 

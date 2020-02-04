@@ -369,7 +369,8 @@ export default {
       hours2: 0,
       minutes2: 0,
       euros2: 0,
-      lastScrollTop: 0
+      lastScrollTop: 0,
+      windowScroll: 0
     };
   },
   computed: mapGetters([
@@ -413,12 +414,12 @@ export default {
         this.unfillStroke([this.s2path1, this.s2path2]);
       } else if (
         this.docHeightPerc >= start &&
-        this.docHeightPerc <= start + 16
+        this.docHeightPerc <= start + 17
       ) {
-        this.drawPath(this.s2path1, start, start + 14);
-        this.drawPath(this.s2path2, start, start + 14);
+        this.drawPath(this.s2path1, start, start + 15);
+        this.drawPath(this.s2path2, start, start + 15);
 
-        window.console.log(this.svgStatus(this.s2path1));
+        console.log(this.svgStatus(this.s2path1));
         //animatins on svg progress starts
         if (Math.floor(this.svgStatus(this.s2path1)) < 18) {
           document.querySelectorAll(".new-0, .old-0").forEach(el => {
@@ -430,26 +431,6 @@ export default {
           document.querySelectorAll(".new-0, .old-0").forEach(el => {
             el.style.opacity = "1";
           });
-        }
-
-        if (Math.floor(this.svgStatus(this.s2path1)) < 28) {
-          document.querySelectorAll(".label").forEach(el => {
-            el.style.opacity = "0";
-          });
-
-          document
-            .querySelector(".counter--a")
-            .classList.remove("counter-a-bar");
-          document
-            .querySelector(".counter--b")
-            .classList.remove("counter-b-bar");
-        }
-
-        if (Math.floor(this.svgStatus(this.s2path1)) >= 28) {
-          document.querySelector(".label").style.opacity = "1";
-
-          document.querySelector(".counter--a").classList.add("counter-a-bar");
-          document.querySelector(".counter--b").classList.add("counter-b-bar");
         }
 
         if (Math.floor(this.svgStatus(this.s2path1)) < 31) {
@@ -464,49 +445,69 @@ export default {
           });
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) < 41) {
+        if (Math.floor(this.svgStatus(this.s2path1)) < 35) {
+          document.querySelectorAll(".label").forEach(el => {
+            el.style.opacity = "0";
+          });
+
+          document
+            .querySelector(".counter--a")
+            .classList.remove("counter-a-bar");
+          document
+            .querySelector(".counter--b")
+            .classList.remove("counter-b-bar");
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 35) {
+          document.querySelector(".label").style.opacity = "1";
+
+          document.querySelector(".counter--a").classList.add("counter-a-bar");
+          document.querySelector(".counter--b").classList.add("counter-b-bar");
+        }
+
+        if (Math.floor(this.svgStatus(this.s2path1)) < 46) {
           document.querySelectorAll("#new_icon-2").forEach(el => {
             el.style.opacity = "0";
           });
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) >= 41) {
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 46) {
           document.querySelectorAll("#new_icon-2").forEach(el => {
             el.style.opacity = "1";
           });
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) < 54) {
+        if (Math.floor(this.svgStatus(this.s2path1)) < 59) {
           document.querySelectorAll("#old_icon-2, #new_icon-3").forEach(el => {
             el.style.opacity = "0";
           });
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) >= 54) {
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 59) {
           document.querySelectorAll("#old_icon-2, #new_icon-3").forEach(el => {
             el.style.opacity = "1";
           });
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) < 80) {
+        if (Math.floor(this.svgStatus(this.s2path1)) < 85) {
           document.querySelectorAll("#old_icon-3").forEach(el => {
             el.style.opacity = "0";
           });
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) >= 80) {
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 85) {
           document.querySelectorAll("#old_icon-3").forEach(el => {
             el.style.opacity = "1";
           });
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) < 100) {
+        if (Math.floor(this.svgStatus(this.s2path1)) < 105) {
           document.querySelectorAll("#old_icon-4").forEach(el => {
             el.style.opacity = "0";
           });
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) >= 100) {
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 105) {
           document.querySelectorAll("#old_icon-4").forEach(el => {
             el.style.opacity = "1";
           });
@@ -553,22 +554,21 @@ export default {
           this.lastScrollTop = st <= 0 ? 0 : st;
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) < 68) {
+        if (Math.floor(this.svgStatus(this.s2path1)) < 73) {
           document.querySelector("#check_b").style.opacity = "0";
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) >= 68) {
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 73) {
           document.querySelector("#check_b").style.opacity = "1";
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) < 110) {
+        if (Math.floor(this.svgStatus(this.s2path1)) < 113) {
           document.querySelector("#check_a").style.opacity = "0";
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) >= 110) {
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 113) {
           document.querySelector("#check_a").style.opacity = "1";
         }
-
         //animatins on svg progress ends
 
         if (this.docHeightPerc < start + 3.4) {
@@ -576,25 +576,27 @@ export default {
           els.forEach(el => {
             el.style.transform = `translateX(0px)`;
           });
+
+          this.windowScroll = window.scrollY;
         }
         // change 16 to 14 to remove the bug on refresh
+
         if (
           this.docHeightPerc >= start + 3.4 &&
-          this.docHeightPerc <= start + 16
+          this.docHeightPerc <= start + 17
         ) {
-          // window.console.log(window.scrollY - 2380);
-
           let els = document.querySelectorAll(".anim");
           els.forEach(el => {
-            el.style.transform = `translateX(${(window.scrollY - 2220) *
+            el.style.transform = `translateX(${(window.scrollY -
+              this.windowScroll) *
               -1}px)`;
           });
         }
-        if (this.docHeightPerc <= start + 16) {
+        if (this.docHeightPerc <= start + 17) {
           document.querySelector("#product-arrow").style.opacity = "0";
         }
       }
-      if (this.docHeightPerc > start + 16) {
+      if (this.docHeightPerc > start + 17) {
         document.querySelector("#product-arrow").style.opacity = "1";
       }
     },
@@ -652,7 +654,7 @@ export default {
 <style lang="scss">
 #section2 {
   position: relative;
-  height: 750vh;
+  height: 693vh;
   width: 100%;
   background-color: #fff;
   z-index: 2;
@@ -668,8 +670,8 @@ export default {
 
   //path
   .anim {
-    height: 62vw;
-    width: 297.65vw;
+    // height: 62vw;
+    width: 305vw;
     overflow: hidden;
   }
 

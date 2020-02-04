@@ -307,7 +307,7 @@ export default {
           this.docHeightPerc < start + 1.3
         ) {
           this.drawPath(this.svg9c, start + 1.2, start + 1.3);
-          document.querySelector(".txt4").style.opacity = "1";
+          // document.querySelector(".txt4").style.opacity = "1";
           this.fillStroke([this.svg8a, this.svg9a, this.svg9b]);
           this.unfillStroke([
             this.svg8b,
@@ -573,6 +573,10 @@ export default {
           this.svg9l,
           this.svg9m
         ]);
+      }
+
+      if (this.docHeightPerc >= start + 1.6) {
+        document.querySelector(".txt4").style.opacity = "1";
       }
     },
 

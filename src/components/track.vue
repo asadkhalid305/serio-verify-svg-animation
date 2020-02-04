@@ -170,7 +170,7 @@ export default {
 
       let allSectionsHeightInPx =
         this.sectionsClientHeight.section7 -
-        (document.querySelector(".track-fixed-container").clientHeight + 500) +
+        document.querySelector(".track-fixed-container").clientHeight +
         this.sectionsClientHeight.section6 +
         this.sectionsClientHeight.section5 +
         this.sectionsClientHeight.section4 +
@@ -321,14 +321,14 @@ export default {
   padding: 0;
   z-index: 2;
   position: relative;
-  height: 638vh;
+  height: 469vh;
   width: 100%;
   bottom: 0;
   //   background-color: pink;
 
   .track-fixed-container {
     z-index: 10000;
-    height: 102vh;
+    height: 100vh;
     width: 100%;
     left: 0;
     top: 0;
@@ -378,7 +378,7 @@ export default {
     height: 100vh;
     width: 100vw;
     left: 0;
-    top: -24.5vh;
+    top: -20.7vh;
   }
 }
 </style>

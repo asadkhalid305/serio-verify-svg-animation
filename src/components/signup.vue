@@ -394,7 +394,7 @@ export default {
     //event on scroll
     handleScroll() {
       this.getDocumentHeightPercentage();
-      let start = this.sectionsEndingPerc.section7 - 2;
+      let start = this.sectionsEndingPerc.section7 - 1.8;
 
       //svg handle starts
       if (this.docHeightPerc < start) {

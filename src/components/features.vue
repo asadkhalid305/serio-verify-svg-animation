@@ -372,7 +372,7 @@ export default {
   padding: 0;
   z-index: 2;
   position: relative;
-  height: 1220vh;
+  height: 971vh;
   width: 100%;
   bottom: 0;
   background-color: #ffdf86;

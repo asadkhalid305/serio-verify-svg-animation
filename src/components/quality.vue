@@ -152,7 +152,7 @@ export default {
         this.docHeightPerc < start + 1
       ) {
         this.drawPath(this.svg6a, start, start + 1, -1);
-        // document.querySelector(".txt3").style.opacity = "0";
+        document.querySelector(".txt3").style.opacity = "0";
         this.unfillStroke([
           this.svg6b,
           this.svg7a,
@@ -167,7 +167,6 @@ export default {
         this.docHeightPerc >= start + 1 &&
         this.docHeightPerc < start + 1.8
       ) {
-        document.querySelector(".txt3").style.opacity = "1";
         if (
           this.docHeightPerc >= start + 1 &&
           this.docHeightPerc < start + 1.1
@@ -214,6 +213,7 @@ export default {
           this.docHeightPerc >= start + 1.3 &&
           this.docHeightPerc <= start + 1.4
         ) {
+          // document.querySelector(".txt3").style.opacity = "1";
           this.drawPath(this.svg7d, start + 1.3, start + 1.4);
           this.fillStroke([this.svg6a, this.svg7a, this.svg7b, this.svg7c]);
           this.unfillStroke([this.svg6b, this.svg7e, this.svg7f, this.svg7g]);
@@ -288,6 +288,10 @@ export default {
           this.svg7g
         ]);
       }
+
+      if (this.docHeightPerc >= start + 1.6) {
+        document.querySelector(".txt3").style.opacity = "1";
+      }
     },
 
     //draw line
@@ -343,6 +347,11 @@ export default {
   width: 100%;
   bottom: 0;
   background-color: #333333;
+
+  svg {
+    position: absolute;
+    bottom: 0;
+  }
 
   .txt3.visible {
     // opacity: 1;
