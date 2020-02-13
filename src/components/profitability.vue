@@ -213,7 +213,7 @@ export default {
     //event on scroll
     handleScroll() {
       this.getDocumentHeightPercentage();
-      let start = this.sectionsEndingPerc.section3 + 1.4;
+      let start = this.sectionsEndingPerc.section2 + 6.3;
       // window.console.log(start);
 
       if (this.docHeightPerc < start) {

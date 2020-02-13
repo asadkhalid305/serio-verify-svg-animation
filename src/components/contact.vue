@@ -3,7 +3,7 @@
     id="contact"
     class="contact grid-parent bg-blue txt-white txt-center ng-scope"
   >
-    <div class="one-half full-height"></div>
+    <div class="one-half full-height one-half-bg"></div>
     <div class="one-half full-height centered-parent">
       <div class="centered">
         <svg
@@ -29,7 +29,10 @@
         <a class="txt-teal" href="mailto:info@serioverify.com"
           >info@serioverify.com</a
         >
-        / <a href="tel:+4531112231">+45&nbsp;31&nbsp;11&nbsp;22&nbsp;31</a>
+        /
+        <a class="txt-teal" href="tel:+4531112231"
+          >+45&nbsp;31&nbsp;11&nbsp;22&nbsp;31</a
+        >
       </p>
     </div>
   </section>
@@ -39,7 +42,7 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 * {
   background-repeat: no-repeat;
   margin: 0;
@@ -85,9 +88,10 @@ section.contact .one-half {
 }
 .one-half {
   width: 50%;
+}
+.one-half-bg {
   background-image: url("../assets/images/contact/contact.jpg");
 }
-
 .centered-parent {
   position: relative;
 }
@@ -114,5 +118,30 @@ section.contact .one-half {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 4vw;
+  line-height: 4.2vw;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: canada-type-gibson, sans-serif;
+  font-weight: 800 !important;
+}
+section.contact .one-half p {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-family: grad, serif;
+}
+
+.txt-teal {
+  color: #3aafa9;
+  cursor: pointer;
+  text-decoration: none;
 }
 </style>

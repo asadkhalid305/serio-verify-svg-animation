@@ -299,7 +299,7 @@
         </svg>
 
         <!-- form -->
-        <!-- <div class="txt">
+        <div class="txt">
           <h1 class="txt-white">
             Get a <span class="txt-black">Free</span><br />Evaluation of your
             current<br />sales setup
@@ -348,7 +348,7 @@
                     class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
                   />
                 </div>
-                <button
+                <!-- <button
                   type="submit"
                   class="button--border"
                   data-ng-click="cm.subcribe($event, signup)"
@@ -356,11 +356,11 @@
                   disabled="disabled"
                 >
                   Submit
-                </button>
+                </button> -->
               </form>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </section>
@@ -491,7 +491,7 @@ export default {
     line-height: 34px;
     position: absolute;
     transition: all 0.3s ease;
-    bottom: 26.5%;
+    bottom: 33%;
     left: 53%;
     opacity: 1;
     max-width: 44%;
@@ -541,6 +541,38 @@ export default {
       background-repeat: no-repeat;
       margin: 0;
       padding: 0;
+    }
+  }
+
+  //form css
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #88b991;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 18px 24px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 8px;
+    font-family: grad, serif;
+    color: #fff;
+    letter-spacing: 1px;
+    max-width: 420px;
+    border: none;
+
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: white;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: white;
+    }
+
+    &::placeholder {
+      color: white;
     }
   }
 }

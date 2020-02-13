@@ -300,9 +300,8 @@ export default {
       // window.console.log(this.sectionsEndingPerc.section1);
 
       //make the condition dynamic by taking portion of section
-      let start =
-        this.sectionsEndingPerc.section2 - this.sectionsEndingPerc.section1;
-
+      let start = this.sectionsEndingPerc.section2 - 2;
+      // start -= 2;
       // window.console.log(this.sectionsEndingPerc.section2);
 
       if (this.docHeightPerc < start) {

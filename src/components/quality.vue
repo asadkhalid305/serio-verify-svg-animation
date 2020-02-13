@@ -133,7 +133,7 @@ export default {
     //event on scroll
     handleScroll() {
       this.getDocumentHeightPercentage();
-      let start = this.sectionsEndingPerc.section2 + 1.5;
+      let start = this.sectionsEndingPerc.section2 + 3.5;
 
       if (this.docHeightPerc < start) {
         this.unfillStroke([

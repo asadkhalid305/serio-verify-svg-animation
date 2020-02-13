@@ -562,11 +562,11 @@ export default {
           document.querySelector("#check_b").style.opacity = "1";
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) < 113) {
+        if (Math.floor(this.svgStatus(this.s2path1)) < 110) {
           document.querySelector("#check_a").style.opacity = "0";
         }
 
-        if (Math.floor(this.svgStatus(this.s2path1)) >= 113) {
+        if (Math.floor(this.svgStatus(this.s2path1)) >= 110) {
           document.querySelector("#check_a").style.opacity = "1";
         }
         //animatins on svg progress ends
@@ -698,7 +698,7 @@ export default {
   }
   .txt.new {
     color: #333333;
-    top: 78%;
+    top: 79%;
   }
 
   .txt {
@@ -775,7 +775,7 @@ export default {
     #check_a,
     #check_b {
       opacity: 0;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.3s ease;
     }
 
     .h3,
